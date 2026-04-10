@@ -9,11 +9,10 @@ import courseRoutes from './routes/courseRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
-dotenv.config();
-
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const clientDistPath = path.resolve(__dirname, '../../client/dist');
 
 app.use(
