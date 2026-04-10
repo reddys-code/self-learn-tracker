@@ -12,6 +12,20 @@ jobs:
     runs-on: self-hosted
 
     steps:
+      - name: Validate required secrets
+        env:
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          MONGO_URI: ${{ secrets.MONGO_URI }}
+        run: |
+          if [ -z "$JWT_SECRET" ]; then
+            echo "JWT_SECRET secret is missing. Configure it in GitHub repository secrets." >&2
+            exit 1
+          fi
+          if [ -z "$MONGO_URI" ]; then
+            echo "MONGO_URI secret is missing. Configure it in GitHub repository secrets." >&2
+            exit 1
+          fi
+
       - name: Pull latest image
         run: sudo docker pull vishnu3332/planner:latest
 
@@ -19,4 +33,13 @@ jobs:
         run: sudo docker rm -f cicd-pipeline-container || true
 
       - name: Run new container
-        run: sudo docker run -d    -p 5173:5173  -e JWT_SECRET=${{ secrets.JWT_SECRET }} --name cicd-pipeline-container vishnu3332/planner:latest
+        run: |
+          sudo docker run -d \
+            --name cicd-pipeline-container \
+            -p 5000:5000 \
+            -e PORT=5000 \
+            -e NODE_ENV=production \
+            -e CLIENT_URL=http://localhost:5000 \
+            -e JWT_SECRET="${{ secrets.JWT_SECRET }}" \
+            -e MONGO_URI="${{ secrets.MONGO_URI }}" \
+            vishnu3332/planner:latest
