@@ -7,7 +7,7 @@ export function LoginPage() {
   const { isAuthenticated, needsSetup, login, setAuthError, authError } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [form, setForm] = useState({ email: '', password: '' });
+  const [form, setForm] = useState({ identifier: '', password: '' });
   const [submitting, setSubmitting] = useState(false);
 
   if (isAuthenticated) {
@@ -53,12 +53,12 @@ export function LoginPage() {
           </div>
 
           <label>
-            <span>Email</span>
+            <span>Username or Email</span>
             <input
-              type="email"
+              type="text"
               required
-              value={form.email}
-              onChange={(event) => setForm((current) => ({ ...current, email: event.target.value }))}
+              value={form.identifier}
+              onChange={(event) => setForm((current) => ({ ...current, identifier: event.target.value }))}
             />
           </label>
           <label>

@@ -9,6 +9,14 @@ function normalizeEmail(email) {
   return String(email || '').trim().toLowerCase();
 }
 
+function normalizeLoginIdentifier(identifier) {
+  return String(identifier || '').trim();
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function normalizeId(value) {
   return String(value);
 }
@@ -90,6 +98,18 @@ export async function getUserByEmail(email) {
   return users.find((user) => user.email === normalizedEmail) || null;
 }
 
+export async function getUserByUsername(username) {
+  const normalizedUsername = normalizeLoginIdentifier(username).toLowerCase();
+  if (!normalizedUsername) return null;
+
+  if (isDatabaseConnected()) {
+    return User.findOne({ name: new RegExp(`^${escapeRegExp(normalizedUsername)}$`, 'i') }).lean();
+  }
+
+  const users = await readUsersFile();
+  return users.find((user) => String(user.name || '').trim().toLowerCase() === normalizedUsername) || null;
+}
+
 export async function createUser({ name, email, password, role = 'user', isActive = true, createdBy = null, assignedCourseIds = [] }) {
   const cleanName = String(name || '').trim();
   const cleanEmail = normalizeEmail(email);
@@ -154,16 +174,20 @@ export async function bootstrapAdmin(payload) {
   return createUser({ ...payload, role: 'admin', isActive: true, createdBy: null });
 }
 
-export async function verifyCredentials({ email, password }) {
-  const user = await getUserByEmail(email);
+export async function verifyCredentials({ identifier, email, username, password }) {
+  const loginIdentifier = normalizeLoginIdentifier(identifier || email || username);
+  const user = loginIdentifier.includes('@')
+    ? await getUserByEmail(loginIdentifier)
+    : await getUserByUsername(loginIdentifier);
+
   if (!user || !user.isActive) {
-    throw createServiceError('Invalid email or password.', 401);
+    throw createServiceError('Invalid username/email or password.', 401);
   }
 
   const passwordHash = user.passwordHash;
   const isValid = await bcrypt.compare(String(password || ''), passwordHash);
   if (!isValid) {
-    throw createServiceError('Invalid email or password.', 401);
+    throw createServiceError('Invalid username/email or password.', 401);
   }
 
   await touchLastLogin(normalizeId(user._id || user.id));

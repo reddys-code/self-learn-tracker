@@ -28,6 +28,8 @@ export async function createBootstrapAdmin(req, res, next) {
 export async function login(req, res, next) {
   try {
     const user = await verifyCredentials({
+      identifier: req.body?.identifier,
+      username: req.body?.username,
       email: req.body?.email,
       password: req.body?.password,
     });

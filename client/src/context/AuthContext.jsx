@@ -38,9 +38,10 @@ export function AuthProvider({ children }) {
     void loadSession();
   }, [loadSession]);
 
-  const login = useCallback(async ({ email, password }) => {
+  const login = useCallback(async ({ identifier, email, username, password }) => {
     setAuthError('');
-    const { data } = await apiClient.post('/auth/login', { email, password });
+    const loginIdentifier = identifier || email || username || '';
+    const { data } = await apiClient.post('/auth/login', { identifier: loginIdentifier, password });
     setStoredToken(data.token);
     setUser(data.user);
     setNeedsSetup(false);
