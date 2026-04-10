@@ -1,0 +1,2060 @@
+{
+  "slug": "solution-architect-120-day",
+  "title": "120-Day Solution Architect Roadmap - Interactive Brochure",
+  "description": "Interactive brochure for a 120-day Solution Architect roadmap with curriculum details, weekly explorer, capstone artifacts, and tracker workflow.",
+  "hero": {
+    "eyebrow": "INTERACTIVE CURRICULUM BROCHURE",
+    "title": "120-Day Solution Architect Roadmap",
+    "lead": "A complete path for engineers moving from implementation into architecture decisions, cloud design, and production-ready delivery.",
+    "chips": [
+      "Java / Spring",
+      "AWS + DevOps",
+      "System Design",
+      "Capstone Portfolio"
+    ],
+    "strapTitle": "Build decisions. Defend trade-offs. Present as an architect.",
+    "strapText": "Use the interactive brochure as the curriculum map and the tracker workbook as the operating system for your full 120-day transformation.",
+    "timeline": [
+      {
+        "phase": "Days 1-30",
+        "title": "Foundations",
+        "description": "Algorithm thinking, JVM, AWS core, API design."
+      },
+      {
+        "phase": "Days 31-60",
+        "title": "Build Systems",
+        "description": "Spring Boot, containers, messaging, observability."
+      },
+      {
+        "phase": "Days 61-90",
+        "title": "Operate & Scale",
+        "description": "Resilience, security, IaC, HA/DR, cost."
+      },
+      {
+        "phase": "Days 91-120",
+        "title": "Architect Mode",
+        "description": "Design sprints, capstone, presentation."
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "120",
+      "label": "days of guided execution"
+    },
+    {
+      "value": "18",
+      "label": "weekly checkpoints"
+    },
+    {
+      "value": "702",
+      "label": "guided hours in the workbook"
+    },
+    {
+      "value": "1",
+      "label": "interview-ready capstone"
+    },
+    {
+      "value": "4",
+      "label": "phases of progression"
+    },
+    {
+      "value": "18",
+      "label": "weekly execution loops"
+    },
+    {
+      "value": "10+",
+      "label": "artifact types to build"
+    },
+    {
+      "value": "1",
+      "label": "capstone to present"
+    }
+  ],
+  "introCards": [
+    {
+      "title": "What makes this roadmap different",
+      "items": [
+        "Every weekend ends with proof: code, deploys, diagrams, ADRs, notes, or presentation artifacts.",
+        "The plan blends DSA maintenance, Java delivery, cloud architecture, React support knowledge, and architect thinking.",
+        "Checkpoints at Day 30, Day 60, Day 90, and Day 120 keep the focus on readiness, not busy work."
+      ]
+    },
+    {
+      "title": "Who it is for",
+      "items": [
+        "Senior Java and Spring engineers targeting Application Solution Architect roles.",
+        "Developers preparing for internal promotion or a broader architecture transition.",
+        "Builders who want cloud depth, stronger trade-off stories, and portfolio artifacts."
+      ]
+    },
+    {
+      "title": "What you finish with",
+      "items": [
+        "Deployed services, async event flow, observability, and a production-style platform slice.",
+        "High-value artifacts: HLD, ADRs, API spec, data model, runbook, security baseline, cost note, deck.",
+        "A capstone walkthrough and architect-style presentation you can actually defend."
+      ]
+    },
+    {
+      "title": "Execution cadence",
+      "items": [
+        "5h on weekdays and 8h on weekends in the original workbook cadence.",
+        "One review every week: revise, measure, and tighten the next plan.",
+        "The workbook acts as the operating system for daily execution."
+      ]
+    }
+  ],
+  "phases": [
+    {
+      "id": "phase-1",
+      "name": "Foundations",
+      "days": "Days 1-35",
+      "weeks": "Weeks 1-5",
+      "description": "Build the base: problem-solving fluency, AWS core, API thinking, data decisions, and first architecture artifacts.",
+      "metrics": [
+        {
+          "value": "205h",
+          "label": "planned"
+        },
+        {
+          "value": "35",
+          "label": "days"
+        }
+      ],
+      "outcome": "By Day 30 you can explain NFRs, choose storage, design a small scalable system, and talk through your first major trade-offs.",
+      "accent": "#2e6ca5"
+    },
+    {
+      "id": "phase-2",
+      "name": "Build Systems",
+      "days": "Days 36-63",
+      "weeks": "Weeks 6-9",
+      "description": "Move from concepts to deployable services: Spring Boot, containers, events, observability, and measured reliability.",
+      "metrics": [
+        {
+          "value": "164h",
+          "label": "planned"
+        },
+        {
+          "value": "28",
+          "label": "days"
+        }
+      ],
+      "outcome": "By Day 60 you have a deployed containerized service, an async event flow, and an observable platform slice with runbook-level thinking.",
+      "accent": "#1aa9a1"
+    },
+    {
+      "id": "phase-3",
+      "name": "Operate & Scale",
+      "days": "Days 64-91",
+      "weeks": "Weeks 10-13",
+      "description": "Deepen into resilience, security, infrastructure as code, performance, high availability, and cost-aware operations.",
+      "metrics": [
+        {
+          "value": "164h",
+          "label": "planned"
+        },
+        {
+          "value": "28",
+          "label": "days"
+        }
+      ],
+      "outcome": "By Day 90 you can defend reliability, security, cost, HA, and operational readiness with much stronger architect language.",
+      "accent": "#f0b13b"
+    },
+    {
+      "id": "phase-4",
+      "name": "Architect Mode",
+      "days": "Days 92-120",
+      "weeks": "Weeks 14-18",
+      "description": "Turn technical depth into design stories, portfolio artifacts, and a capstone you can present with confidence.",
+      "metrics": [
+        {
+          "value": "169h",
+          "label": "planned"
+        },
+        {
+          "value": "29",
+          "label": "days"
+        }
+      ],
+      "outcome": "By Day 120 you can present an end-to-end solution, justify trade-offs, and show a portfolio that sounds like architect-grade work.",
+      "accent": "#e64b67"
+    }
+  ],
+  "checkpoints": [
+    {
+      "day": "Day 30",
+      "title": "Foundations defended",
+      "description": "NFRs, API modeling, VPC basics, storage choices, and first architecture notes."
+    },
+    {
+      "day": "Day 60",
+      "title": "Systems shipped",
+      "description": "Containerized Spring service, async messaging path, cache layer, and observability baseline."
+    },
+    {
+      "day": "Day 90",
+      "title": "Production posture",
+      "description": "Resilience, security, CI/CD, IaC, performance, HA/DR, and cost language."
+    },
+    {
+      "day": "Day 120",
+      "title": "Architect presentation",
+      "description": "Capstone, ADR set, runbook, deck, mock Q&A, and portfolio-ready story."
+    }
+  ],
+  "weeks": [
+    {
+      "weekNumber": 1,
+      "phaseLabel": "Phase 1: Foundations",
+      "title": "Foundation: algorithm thinking, JVM, AWS account/core infra, React fundamentals, architect basics",
+      "summary": "Phase 1: Foundations \u00b7 1-7",
+      "deliverables": [
+        "Push week-1 code and architecture sketch to Git",
+        "Write week-1 summary and weak-topic list"
+      ],
+      "days": [
+        {
+          "dayNumber": 1,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Arrays intro + complexity",
+          "javaSpring": "JVM memory model: heap, stack, metaspace",
+          "awsDevOps": "AWS global infrastructure, account setup, MFA",
+          "reactFrontend": "React mental model, setup, components",
+          "architectureDesign": "Role of a solution architect; Well-Architected pillars",
+          "primaryDeliverable": "Create study repo, notes template, AWS account, local Java/Node setup",
+          "searchText": "1 mon weekday 5 arrays intro + complexity jvm memory model: heap, stack, metaspace aws global infrastructure, account setup, mfa react mental model, setup, components role of a solution architect; well-architected pillars create study repo, notes template, aws account, local java/node setup foundation: algorithm thinking, jvm, aws account/core infra, react fundamentals, architect basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 2,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Hashing patterns",
+          "javaSpring": "Class loading, JIT, GC overview",
+          "awsDevOps": "IAM users, groups, roles, policies",
+          "reactFrontend": "JSX, props, state",
+          "architectureDesign": "Functional vs non-functional requirements",
+          "primaryDeliverable": "Write one-page notes for IAM and NFRs",
+          "searchText": "2 tue weekday 5 hashing patterns class loading, jit, gc overview iam users, groups, roles, policies jsx, props, state functional vs non-functional requirements write one-page notes for iam and nfrs foundation: algorithm thinking, jvm, aws account/core infra, react fundamentals, architect basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 3,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Prefix sum",
+          "javaSpring": "G1 GC and memory troubleshooting basics",
+          "awsDevOps": "AWS CLI, billing alerts, budgets",
+          "reactFrontend": "useState/useEffect basics",
+          "architectureDesign": "Latency vs throughput vs scalability",
+          "primaryDeliverable": "Budget alarm and first React mini-screen",
+          "searchText": "3 wed weekday 5 prefix sum g1 gc and memory troubleshooting basics aws cli, billing alerts, budgets usestate/useeffect basics latency vs throughput vs scalability budget alarm and first react mini-screen foundation: algorithm thinking, jvm, aws account/core infra, react fundamentals, architect basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 4,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Kadane + product array except self",
+          "javaSpring": "Collections overview and ArrayList vs LinkedList",
+          "awsDevOps": "EC2 basics, AMI, instance families",
+          "reactFrontend": "Lists, conditional rendering, events",
+          "architectureDesign": "CAP theorem and distributed-system basics",
+          "primaryDeliverable": "Launch EC2 and run hello-world app",
+          "searchText": "4 thu weekday 5 kadane + product array except self collections overview and arraylist vs linkedlist ec2 basics, ami, instance families lists, conditional rendering, events cap theorem and distributed-system basics launch ec2 and run hello-world app foundation: algorithm thinking, jvm, aws account/core infra, react fundamentals, architect basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 5,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Best time to buy/sell + move zeroes",
+          "javaSpring": "HashMap internals and collision handling",
+          "awsDevOps": "Security groups, key pairs, SSH",
+          "reactFrontend": "Reusable components and props flow",
+          "architectureDesign": "Monolith vs modular monolith",
+          "primaryDeliverable": "Deploy simple Java app on EC2",
+          "searchText": "5 fri weekday 5 best time to buy/sell + move zeroes hashmap internals and collision handling security groups, key pairs, ssh reusable components and props flow monolith vs modular monolith deploy simple java app on ec2 foundation: algorithm thinking, jvm, aws account/core infra, react fundamentals, architect basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 6,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: 4 array/hash problems",
+          "javaSpring": "Java profiling intro with VisualVM/JFR",
+          "awsDevOps": "S3 basics: buckets, policies, object upload",
+          "reactFrontend": "Mini CRUD UI",
+          "architectureDesign": "Sketch 3-tier architecture",
+          "primaryDeliverable": "Push week-1 code and architecture sketch to Git",
+          "searchText": "6 sat weekend 8 weekend drill: 4 array/hash problems java profiling intro with visualvm/jfr s3 basics: buckets, policies, object upload mini crud ui sketch 3-tier architecture push week-1 code and architecture sketch to git foundation: algorithm thinking, jvm, aws account/core infra, react fundamentals, architect basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 7,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed array set",
+          "javaSpring": "Build Java CLI utility for file parsing",
+          "awsDevOps": "Host a static asset on S3",
+          "reactFrontend": "Forms basics",
+          "architectureDesign": "Weekly retrospective and gap list",
+          "primaryDeliverable": "Write week-1 summary and weak-topic list",
+          "searchText": "7 sun weekend 8 weekly review + timed array set build java cli utility for file parsing host a static asset on s3 forms basics weekly retrospective and gap list write week-1 summary and weak-topic list foundation: algorithm thinking, jvm, aws account/core infra, react fundamentals, architect basics phase 1: foundations"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 2,
+      "phaseLabel": "Phase 1: Foundations",
+      "title": "Sliding window, generics/streams, VPC basics, routing/forms, API design",
+      "summary": "Phase 1: Foundations \u00b7 8-14",
+      "deliverables": [
+        "Produce a short design note for a CRUD API",
+        "Update cheatsheets"
+      ],
+      "days": [
+        {
+          "dayNumber": 8,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Fixed sliding window",
+          "javaSpring": "Generics and type safety",
+          "awsDevOps": "VPC, CIDR, public/private subnets",
+          "reactFrontend": "React Router basics",
+          "architectureDesign": "API resource modeling",
+          "primaryDeliverable": "Build VPC with public/private subnet diagram",
+          "searchText": "8 mon weekday 5 fixed sliding window generics and type safety vpc, cidr, public/private subnets react router basics api resource modeling build vpc with public/private subnet diagram sliding window, generics/streams, vpc basics, routing/forms, api design phase 1: foundations"
+        },
+        {
+          "dayNumber": 9,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Variable sliding window",
+          "javaSpring": "Functional interfaces and lambdas",
+          "awsDevOps": "Route tables, internet gateway, NAT gateway",
+          "reactFrontend": "Route params and nested routes",
+          "architectureDesign": "REST constraints and idempotency",
+          "primaryDeliverable": "Router-based mini app",
+          "searchText": "9 tue weekday 5 variable sliding window functional interfaces and lambdas route tables, internet gateway, nat gateway route params and nested routes rest constraints and idempotency router-based mini app sliding window, generics/streams, vpc basics, routing/forms, api design phase 1: foundations"
+        },
+        {
+          "dayNumber": 10,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Longest substring without repeating",
+          "javaSpring": "Streams: map/filter/reduce",
+          "awsDevOps": "NACL vs security groups",
+          "reactFrontend": "Controlled forms",
+          "architectureDesign": "HTTP methods, status codes, versioning",
+          "primaryDeliverable": "Document one REST API contract",
+          "searchText": "10 wed weekday 5 longest substring without repeating streams: map/filter/reduce nacl vs security groups controlled forms http methods, status codes, versioning document one rest api contract sliding window, generics/streams, vpc basics, routing/forms, api design phase 1: foundations"
+        },
+        {
+          "dayNumber": 11,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Minimum window substring",
+          "javaSpring": "Optional and records",
+          "awsDevOps": "Hands-on VPC lab",
+          "reactFrontend": "Form validation patterns",
+          "architectureDesign": "Pagination/filter/sort design",
+          "primaryDeliverable": "Working VPC + notes",
+          "searchText": "11 thu weekday 5 minimum window substring optional and records hands-on vpc lab form validation patterns pagination/filter/sort design working vpc + notes sliding window, generics/streams, vpc basics, routing/forms, api design phase 1: foundations"
+        },
+        {
+          "dayNumber": 12,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Character replacement / permutation in string",
+          "javaSpring": "Exception handling and logging basics",
+          "awsDevOps": "EC2 inside VPC + bastion or SSM concept",
+          "reactFrontend": "Custom hooks",
+          "architectureDesign": "Authentication basics and session vs token",
+          "primaryDeliverable": "Hook for form state + API layer notes",
+          "searchText": "12 fri weekday 5 character replacement / permutation in string exception handling and logging basics ec2 inside vpc + bastion or ssm concept custom hooks authentication basics and session vs token hook for form state + api layer notes sliding window, generics/streams, vpc basics, routing/forms, api design phase 1: foundations"
+        },
+        {
+          "dayNumber": 13,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: 4 sliding-window problems",
+          "javaSpring": "Streams-based Java utility",
+          "awsDevOps": "VPC end-to-end lab",
+          "reactFrontend": "Router + forms mini app",
+          "architectureDesign": "Architecture review: API design and auth choices",
+          "primaryDeliverable": "Produce a short design note for a CRUD API",
+          "searchText": "13 sat weekend 8 weekend drill: 4 sliding-window problems streams-based java utility vpc end-to-end lab router + forms mini app architecture review: api design and auth choices produce a short design note for a crud api sliding window, generics/streams, vpc basics, routing/forms, api design phase 1: foundations"
+        },
+        {
+          "dayNumber": 14,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed mixed set",
+          "javaSpring": "Refactor with records/Optional",
+          "awsDevOps": "Review IAM/VPC",
+          "reactFrontend": "React refactor day",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update cheatsheets",
+          "searchText": "14 sun weekend 8 weekly review + timed mixed set refactor with records/optional review iam/vpc react refactor day retrospective update cheatsheets sliding window, generics/streams, vpc basics, routing/forms, api design phase 1: foundations"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 3,
+      "phaseLabel": "Phase 1: Foundations",
+      "title": "Two pointers/strings, concurrency, storage/RDS, state management, caching/data modeling",
+      "summary": "Phase 1: Foundations \u00b7 15-21",
+      "deliverables": [
+        "Small backend + DB + UI demo",
+        "Update cheatsheets"
+      ],
+      "days": [
+        {
+          "dayNumber": 15,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Two pointers intro + valid palindrome",
+          "javaSpring": "Threads vs runnables",
+          "awsDevOps": "S3 versioning, lifecycle, storage classes",
+          "reactFrontend": "Context API",
+          "architectureDesign": "Caching basics and cache-aside",
+          "primaryDeliverable": "Lifecycle policy and Context demo",
+          "searchText": "15 mon weekday 5 two pointers intro + valid palindrome threads vs runnables s3 versioning, lifecycle, storage classes context api caching basics and cache-aside lifecycle policy and context demo two pointers/strings, concurrency, storage/rds, state management, caching/data modeling phase 1: foundations"
+        },
+        {
+          "dayNumber": 16,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Container with most water / 3Sum pattern",
+          "javaSpring": "Thread lifecycle, synchronized, locks",
+          "awsDevOps": "EBS volumes and snapshots",
+          "reactFrontend": "useReducer",
+          "architectureDesign": "Write-through vs write-back cache",
+          "primaryDeliverable": "Notes on storage choices",
+          "searchText": "16 tue weekday 5 container with most water / 3sum pattern thread lifecycle, synchronized, locks ebs volumes and snapshots usereducer write-through vs write-back cache notes on storage choices two pointers/strings, concurrency, storage/rds, state management, caching/data modeling phase 1: foundations"
+        },
+        {
+          "dayNumber": 17,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Fast/slow pointers",
+          "javaSpring": "volatile, race conditions",
+          "awsDevOps": "EFS basics and use cases",
+          "reactFrontend": "Redux basics",
+          "architectureDesign": "SQL vs NoSQL decision factors",
+          "primaryDeliverable": "Redux starter app",
+          "searchText": "17 wed weekday 5 fast/slow pointers volatile, race conditions efs basics and use cases redux basics sql vs nosql decision factors redux starter app two pointers/strings, concurrency, storage/rds, state management, caching/data modeling phase 1: foundations"
+        },
+        {
+          "dayNumber": 18,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "String frequency/anagram/grouping patterns",
+          "javaSpring": "ExecutorService and Future",
+          "awsDevOps": "RDS basics, engines, backups",
+          "reactFrontend": "Redux Toolkit",
+          "architectureDesign": "ER modeling and normalization",
+          "primaryDeliverable": "Provision RDS and connect from app",
+          "searchText": "18 thu weekday 5 string frequency/anagram/grouping patterns executorservice and future rds basics, engines, backups redux toolkit er modeling and normalization provision rds and connect from app two pointers/strings, concurrency, storage/rds, state management, caching/data modeling phase 1: foundations"
+        },
+        {
+          "dayNumber": 19,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Longest palindromic substring / string manipulation",
+          "javaSpring": "CompletableFuture intro",
+          "awsDevOps": "Read replicas and multi-AZ concept",
+          "reactFrontend": "Async thunks or RTK Query",
+          "architectureDesign": "Indexes and query design basics",
+          "primaryDeliverable": "Document DB trade-offs",
+          "searchText": "19 fri weekday 5 longest palindromic substring / string manipulation completablefuture intro read replicas and multi-az concept async thunks or rtk query indexes and query design basics document db trade-offs two pointers/strings, concurrency, storage/rds, state management, caching/data modeling phase 1: foundations"
+        },
+        {
+          "dayNumber": 20,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: 4 pointer/string problems",
+          "javaSpring": "Concurrent file processor",
+          "awsDevOps": "RDS hands-on + schema",
+          "reactFrontend": "Redux app feature",
+          "architectureDesign": "Database design exercise",
+          "primaryDeliverable": "Small backend + DB + UI demo",
+          "searchText": "20 sat weekend 8 weekend drill: 4 pointer/string problems concurrent file processor rds hands-on + schema redux app feature database design exercise small backend + db + ui demo two pointers/strings, concurrency, storage/rds, state management, caching/data modeling phase 1: foundations"
+        },
+        {
+          "dayNumber": 21,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Concurrency notes cleanup",
+          "awsDevOps": "Storage recap",
+          "reactFrontend": "State-management recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update cheatsheets",
+          "searchText": "21 sun weekend 8 weekly review + timed set concurrency notes cleanup storage recap state-management recap retrospective update cheatsheets two pointers/strings, concurrency, storage/rds, state management, caching/data modeling phase 1: foundations"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 4,
+      "phaseLabel": "Phase 1: Foundations",
+      "title": "Binary search/sorting/intervals, modern Java, RDS vs DynamoDB, API integration, load balancing/data scale",
+      "summary": "Phase 1: Foundations \u00b7 22-28",
+      "deliverables": [
+        "Milestone review for Day 30",
+        "Prepare milestone summary"
+      ],
+      "days": [
+        {
+          "dayNumber": 22,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Binary search basics",
+          "javaSpring": "CompletableFuture chaining",
+          "awsDevOps": "DynamoDB intro",
+          "reactFrontend": "Fetch/Axios basics",
+          "architectureDesign": "Load balancing fundamentals",
+          "primaryDeliverable": "Call API from React app",
+          "searchText": "22 mon weekday 5 binary search basics completablefuture chaining dynamodb intro fetch/axios basics load balancing fundamentals call api from react app binary search/sorting/intervals, modern java, rds vs dynamodb, api integration, load balancing/data scale phase 1: foundations"
+        },
+        {
+          "dayNumber": 23,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Search insert / first-last position",
+          "javaSpring": "Parallel streams and benchmarking",
+          "awsDevOps": "DynamoDB partition key/sort key",
+          "reactFrontend": "Loading and error states",
+          "architectureDesign": "Horizontal scaling and statelessness",
+          "primaryDeliverable": "Write API client wrapper",
+          "searchText": "23 tue weekday 5 search insert / first-last position parallel streams and benchmarking dynamodb partition key/sort key loading and error states horizontal scaling and statelessness write api client wrapper binary search/sorting/intervals, modern java, rds vs dynamodb, api integration, load balancing/data scale phase 1: foundations"
+        },
+        {
+          "dayNumber": 24,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Search in rotated sorted array",
+          "javaSpring": "Java 21 virtual threads overview",
+          "awsDevOps": "GSI/LSI and capacity modes",
+          "reactFrontend": "Interceptors / reusable API layer",
+          "architectureDesign": "Partitioning and sharding basics",
+          "primaryDeliverable": "Compare virtual threads vs pool notes",
+          "searchText": "24 wed weekday 5 search in rotated sorted array java 21 virtual threads overview gsi/lsi and capacity modes interceptors / reusable api layer partitioning and sharding basics compare virtual threads vs pool notes binary search/sorting/intervals, modern java, rds vs dynamodb, api integration, load balancing/data scale phase 1: foundations"
+        },
+        {
+          "dayNumber": 25,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Sorting fundamentals + comparator",
+          "javaSpring": "Sealed classes, pattern matching refresher",
+          "awsDevOps": "RDS vs DynamoDB decision lab",
+          "reactFrontend": "Pagination / infinite scroll",
+          "architectureDesign": "Consistency models and read/write trade-offs",
+          "primaryDeliverable": "Decision matrix for DB choice",
+          "searchText": "25 thu weekday 5 sorting fundamentals + comparator sealed classes, pattern matching refresher rds vs dynamodb decision lab pagination / infinite scroll consistency models and read/write trade-offs decision matrix for db choice binary search/sorting/intervals, modern java, rds vs dynamodb, api integration, load balancing/data scale phase 1: foundations"
+        },
+        {
+          "dayNumber": 26,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Merge intervals intro",
+          "javaSpring": "JUnit 5 and Mockito basics",
+          "awsDevOps": "Database backup/restore review",
+          "reactFrontend": "Environment configs and feature flags intro",
+          "architectureDesign": "Database scaling patterns",
+          "primaryDeliverable": "Tests added to Java service",
+          "searchText": "26 fri weekday 5 merge intervals intro junit 5 and mockito basics database backup/restore review environment configs and feature flags intro database scaling patterns tests added to java service binary search/sorting/intervals, modern java, rds vs dynamodb, api integration, load balancing/data scale phase 1: foundations"
+        },
+        {
+          "dayNumber": 27,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: search/sort/intervals",
+          "javaSpring": "Collections benchmark mini lab",
+          "awsDevOps": "Full CRUD app with chosen DB",
+          "reactFrontend": "Integrated API UI",
+          "architectureDesign": "Design a small e-commerce architecture",
+          "primaryDeliverable": "Milestone review for Day 30",
+          "searchText": "27 sat weekend 8 weekend drill: search/sort/intervals collections benchmark mini lab full crud app with chosen db integrated api ui design a small e-commerce architecture milestone review for day 30 binary search/sorting/intervals, modern java, rds vs dynamodb, api integration, load balancing/data scale phase 1: foundations"
+        },
+        {
+          "dayNumber": 28,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Refactor and retest",
+          "awsDevOps": "AWS core recap",
+          "reactFrontend": "UI polish",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Prepare milestone summary",
+          "searchText": "28 sun weekend 8 weekly review + timed set refactor and retest aws core recap ui polish retrospective prepare milestone summary binary search/sorting/intervals, modern java, rds vs dynamodb, api integration, load balancing/data scale phase 1: foundations"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 5,
+      "phaseLabel": "Phase 1: Foundations",
+      "title": "Linked list/stack/queue, Spring core, Lambda/API Gateway, advanced state, microservices basics",
+      "summary": "Phase 1: Foundations \u00b7 29-35",
+      "deliverables": [
+        "Compare monolith vs microservice design",
+        "Update architecture notes"
+      ],
+      "days": [
+        {
+          "dayNumber": 29,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Reverse linked list",
+          "javaSpring": "Spring Boot project structure, IoC/DI",
+          "awsDevOps": "Lambda basics",
+          "reactFrontend": "State strategy: local vs global vs server state",
+          "architectureDesign": "Microservice decomposition principles",
+          "primaryDeliverable": "Create Spring Boot base service",
+          "searchText": "29 mon weekday 5 reverse linked list spring boot project structure, ioc/di lambda basics state strategy: local vs global vs server state microservice decomposition principles create spring boot base service linked list/stack/queue, spring core, lambda/api gateway, advanced state, microservices basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 30,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Merge two sorted lists",
+          "javaSpring": "Bean lifecycle and configuration",
+          "awsDevOps": "API Gateway basics",
+          "reactFrontend": "Redux Toolkit slices",
+          "architectureDesign": "Sync vs async service communication",
+          "primaryDeliverable": "Expose first REST endpoint",
+          "searchText": "30 tue weekday 5 merge two sorted lists bean lifecycle and configuration api gateway basics redux toolkit slices sync vs async service communication expose first rest endpoint linked list/stack/queue, spring core, lambda/api gateway, advanced state, microservices basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 31,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Remove nth node / cycle detect",
+          "javaSpring": "Spring MVC controllers",
+          "awsDevOps": "Lambda events and handlers",
+          "reactFrontend": "Normalized state and selectors",
+          "architectureDesign": "Service contracts and OpenAPI",
+          "primaryDeliverable": "OpenAPI spec draft",
+          "searchText": "31 wed weekday 5 remove nth node / cycle detect spring mvc controllers lambda events and handlers normalized state and selectors service contracts and openapi openapi spec draft linked list/stack/queue, spring core, lambda/api gateway, advanced state, microservices basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 32,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Valid parentheses / MinStack",
+          "javaSpring": "Validation + global exception handling",
+          "awsDevOps": "Lambda + API Gateway CRUD",
+          "reactFrontend": "RTK Query or server-state library",
+          "architectureDesign": "Consumer-driven contract thinking",
+          "primaryDeliverable": "Serverless CRUD prototype",
+          "searchText": "32 thu weekday 5 valid parentheses / minstack validation + global exception handling lambda + api gateway crud rtk query or server-state library consumer-driven contract thinking serverless crud prototype linked list/stack/queue, spring core, lambda/api gateway, advanced state, microservices basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 33,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Queue basics / sliding-window max",
+          "javaSpring": "Profiles and externalized config",
+          "awsDevOps": "Step Functions intro",
+          "reactFrontend": "Optimistic updates",
+          "architectureDesign": "Saga pattern intro",
+          "primaryDeliverable": "Profile-based config for dev/test/prod",
+          "searchText": "33 fri weekday 5 queue basics / sliding-window max profiles and externalized config step functions intro optimistic updates saga pattern intro profile-based config for dev/test/prod linked list/stack/queue, spring core, lambda/api gateway, advanced state, microservices basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 34,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: 4 LL/stack/queue problems",
+          "javaSpring": "Build Spring CRUD API",
+          "awsDevOps": "Serverless hands-on lab",
+          "reactFrontend": "State-heavy feature",
+          "architectureDesign": "Microservice sketch for same domain",
+          "primaryDeliverable": "Compare monolith vs microservice design",
+          "searchText": "34 sat weekend 8 weekend drill: 4 ll/stack/queue problems build spring crud api serverless hands-on lab state-heavy feature microservice sketch for same domain compare monolith vs microservice design linked list/stack/queue, spring core, lambda/api gateway, advanced state, microservices basics phase 1: foundations"
+        },
+        {
+          "dayNumber": 35,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Spring recap",
+          "awsDevOps": "Serverless recap",
+          "reactFrontend": "React recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update architecture notes",
+          "searchText": "35 sun weekend 8 weekly review + timed set spring recap serverless recap react recap retrospective update architecture notes linked list/stack/queue, spring core, lambda/api gateway, advanced state, microservices basics phase 1: foundations"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 6,
+      "phaseLabel": "Phase 2: Build Systems",
+      "title": "Heap/trees basics, JPA, Docker/ECS, React performance, auth/security",
+      "summary": "Phase 2: Build Systems \u00b7 36-42",
+      "deliverables": [
+        "Milestone: containerized app in cloud",
+        "Update cheatsheets"
+      ],
+      "days": [
+        {
+          "dayNumber": 36,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Heap intro + kth largest",
+          "javaSpring": "JPA entities and repositories",
+          "awsDevOps": "Docker fundamentals",
+          "reactFrontend": "Render cycle and re-render debugging",
+          "architectureDesign": "Authentication vs authorization",
+          "primaryDeliverable": "Containerize Spring app",
+          "searchText": "36 mon weekday 5 heap intro + kth largest jpa entities and repositories docker fundamentals render cycle and re-render debugging authentication vs authorization containerize spring app heap/trees basics, jpa, docker/ecs, react performance, auth/security phase 2: build systems"
+        },
+        {
+          "dayNumber": 37,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Top K frequent elements",
+          "javaSpring": "Relationships and fetch strategies",
+          "awsDevOps": "Dockerfile + multi-stage build",
+          "reactFrontend": "useMemo",
+          "architectureDesign": "JWT basics and token structure",
+          "primaryDeliverable": "Docker image built locally",
+          "searchText": "37 tue weekday 5 top k frequent elements relationships and fetch strategies dockerfile + multi-stage build usememo jwt basics and token structure docker image built locally heap/trees basics, jpa, docker/ecs, react performance, auth/security phase 2: build systems"
+        },
+        {
+          "dayNumber": 38,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Tree DFS traversals",
+          "javaSpring": "Transactions and propagation basics",
+          "awsDevOps": "ECR registry",
+          "reactFrontend": "useCallback and React.memo",
+          "architectureDesign": "OAuth2/OIDC concepts",
+          "primaryDeliverable": "Push image to ECR",
+          "searchText": "38 wed weekday 5 tree dfs traversals transactions and propagation basics ecr registry usecallback and react.memo oauth2/oidc concepts push image to ecr heap/trees basics, jpa, docker/ecs, react performance, auth/security phase 2: build systems"
+        },
+        {
+          "dayNumber": 39,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Tree BFS / level order",
+          "javaSpring": "Pagination and sorting with Spring Data",
+          "awsDevOps": "ECS / Fargate basics",
+          "reactFrontend": "Lazy loading and code splitting",
+          "architectureDesign": "Session vs token architecture",
+          "primaryDeliverable": "Deploy container service",
+          "searchText": "39 thu weekday 5 tree bfs / level order pagination and sorting with spring data ecs / fargate basics lazy loading and code splitting session vs token architecture deploy container service heap/trees basics, jpa, docker/ecs, react performance, auth/security phase 2: build systems"
+        },
+        {
+          "dayNumber": 40,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Max depth / invert tree",
+          "javaSpring": "Testing REST APIs with MockMvc",
+          "awsDevOps": "ECS service deploy review",
+          "reactFrontend": "List virtualization",
+          "architectureDesign": "Password storage, secrets, secure config",
+          "primaryDeliverable": "Secure config checklist",
+          "searchText": "40 fri weekday 5 max depth / invert tree testing rest apis with mockmvc ecs service deploy review list virtualization password storage, secrets, secure config secure config checklist heap/trees basics, jpa, docker/ecs, react performance, auth/security phase 2: build systems"
+        },
+        {
+          "dayNumber": 41,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: 4 heap/tree problems",
+          "javaSpring": "JPA mini service",
+          "awsDevOps": "Docker + ECS deploy",
+          "reactFrontend": "Performance audit",
+          "architectureDesign": "Security architecture review",
+          "primaryDeliverable": "Milestone: containerized app in cloud",
+          "searchText": "41 sat weekend 8 weekend drill: 4 heap/tree problems jpa mini service docker + ecs deploy performance audit security architecture review milestone: containerized app in cloud heap/trees basics, jpa, docker/ecs, react performance, auth/security phase 2: build systems"
+        },
+        {
+          "dayNumber": 42,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Persistence recap",
+          "awsDevOps": "Container recap",
+          "reactFrontend": "React perf recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update cheatsheets",
+          "searchText": "42 sun weekend 8 weekly review + timed set persistence recap container recap react perf recap retrospective update cheatsheets heap/trees basics, jpa, docker/ecs, react performance, auth/security phase 2: build systems"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 7,
+      "phaseLabel": "Phase 2: Build Systems",
+      "title": "Trees advanced, persistence tuning, messaging, UI architecture, event-driven design",
+      "summary": "Phase 2: Build Systems \u00b7 43-49",
+      "deliverables": [
+        "Milestone: async processing path",
+        "Update diagrams"
+      ],
+      "days": [
+        {
+          "dayNumber": 43,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Tree diameter",
+          "javaSpring": "Connection pools and HikariCP",
+          "awsDevOps": "SQS basics",
+          "reactFrontend": "Folder structure for scale",
+          "architectureDesign": "Event-driven vs request-response",
+          "primaryDeliverable": "Queue producer/consumer demo",
+          "searchText": "43 mon weekday 5 tree diameter connection pools and hikaricp sqs basics folder structure for scale event-driven vs request-response queue producer/consumer demo trees advanced, persistence tuning, messaging, ui architecture, event-driven design phase 2: build systems"
+        },
+        {
+          "dayNumber": 44,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Balanced tree",
+          "javaSpring": "Indexing and query tuning",
+          "awsDevOps": "SNS basics",
+          "reactFrontend": "Reusable component patterns",
+          "architectureDesign": "Eventual consistency",
+          "primaryDeliverable": "DB index review",
+          "searchText": "44 tue weekday 5 balanced tree indexing and query tuning sns basics reusable component patterns eventual consistency db index review trees advanced, persistence tuning, messaging, ui architecture, event-driven design phase 2: build systems"
+        },
+        {
+          "dayNumber": 45,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Path sum",
+          "javaSpring": "Redis caching in Spring",
+          "awsDevOps": "EventBridge basics",
+          "reactFrontend": "Design-system fundamentals",
+          "architectureDesign": "Outbox pattern",
+          "primaryDeliverable": "Cache-backed endpoint",
+          "searchText": "45 wed weekday 5 path sum redis caching in spring eventbridge basics design-system fundamentals outbox pattern cache-backed endpoint trees advanced, persistence tuning, messaging, ui architecture, event-driven design phase 2: build systems"
+        },
+        {
+          "dayNumber": 46,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Lowest common ancestor",
+          "javaSpring": "Structured logging and correlation IDs",
+          "awsDevOps": "SQS/SNS/EventBridge comparison",
+          "reactFrontend": "Accessibility basics",
+          "architectureDesign": "Idempotency and retries",
+          "primaryDeliverable": "Logging standard adopted",
+          "searchText": "46 thu weekday 5 lowest common ancestor structured logging and correlation ids sqs/sns/eventbridge comparison accessibility basics idempotency and retries logging standard adopted trees advanced, persistence tuning, messaging, ui architecture, event-driven design phase 2: build systems"
+        },
+        {
+          "dayNumber": 47,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Serialize/deserialize tree",
+          "javaSpring": "Database tests with Testcontainers",
+          "awsDevOps": "DLQ and retry patterns",
+          "reactFrontend": "Theming and token system",
+          "architectureDesign": "Domain events and schema evolution",
+          "primaryDeliverable": "Dead-letter handling lab",
+          "searchText": "47 fri weekday 5 serialize/deserialize tree database tests with testcontainers dlq and retry patterns theming and token system domain events and schema evolution dead-letter handling lab trees advanced, persistence tuning, messaging, ui architecture, event-driven design phase 2: build systems"
+        },
+        {
+          "dayNumber": 48,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: 4 tree problems",
+          "javaSpring": "Spring service with cache + queue",
+          "awsDevOps": "Event pipeline lab",
+          "reactFrontend": "Component library starter",
+          "architectureDesign": "Event-driven design review",
+          "primaryDeliverable": "Milestone: async processing path",
+          "searchText": "48 sat weekend 8 weekend drill: 4 tree problems spring service with cache + queue event pipeline lab component library starter event-driven design review milestone: async processing path trees advanced, persistence tuning, messaging, ui architecture, event-driven design phase 2: build systems"
+        },
+        {
+          "dayNumber": 49,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Backend recap",
+          "awsDevOps": "Messaging recap",
+          "reactFrontend": "UI architecture recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update diagrams",
+          "searchText": "49 sun weekend 8 weekly review + timed set backend recap messaging recap ui architecture recap retrospective update diagrams trees advanced, persistence tuning, messaging, ui architecture, event-driven design phase 2: build systems"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 8,
+      "phaseLabel": "Phase 2: Build Systems",
+      "title": "Graphs, Spring Cloud patterns, observability, frontend testing, reliability",
+      "summary": "Phase 2: Build Systems \u00b7 50-56",
+      "deliverables": [
+        "Milestone: observable service",
+        "Update runbook"
+      ],
+      "days": [
+        {
+          "dayNumber": 50,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Graph representation + BFS",
+          "javaSpring": "Feign and client abstractions",
+          "awsDevOps": "CloudWatch logs and metrics",
+          "reactFrontend": "Jest basics",
+          "architectureDesign": "SLIs, SLOs, SLAs",
+          "primaryDeliverable": "Enable logs/metrics for one app",
+          "searchText": "50 mon weekday 5 graph representation + bfs feign and client abstractions cloudwatch logs and metrics jest basics slis, slos, slas enable logs/metrics for one app graphs, spring cloud patterns, observability, frontend testing, reliability phase 2: build systems"
+        },
+        {
+          "dayNumber": 51,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "DFS / connected components",
+          "javaSpring": "Gateway pattern for services",
+          "awsDevOps": "Alarms and dashboards",
+          "reactFrontend": "React Testing Library basics",
+          "architectureDesign": "Resilience patterns overview",
+          "primaryDeliverable": "Create dashboard/alarms",
+          "searchText": "51 tue weekday 5 dfs / connected components gateway pattern for services alarms and dashboards react testing library basics resilience patterns overview create dashboard/alarms graphs, spring cloud patterns, observability, frontend testing, reliability phase 2: build systems"
+        },
+        {
+          "dayNumber": 52,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Number of Islands",
+          "javaSpring": "Central config pattern",
+          "awsDevOps": "Tracing concepts and AWS X-Ray",
+          "reactFrontend": "Component tests",
+          "architectureDesign": "Timeouts, retries, circuit breakers",
+          "primaryDeliverable": "Trace one request",
+          "searchText": "52 wed weekday 5 number of islands central config pattern tracing concepts and aws x-ray component tests timeouts, retries, circuit breakers trace one request graphs, spring cloud patterns, observability, frontend testing, reliability phase 2: build systems"
+        },
+        {
+          "dayNumber": 53,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Course Schedule / topo sort",
+          "javaSpring": "Service discovery or registry pattern",
+          "awsDevOps": "Centralized logging pipeline",
+          "reactFrontend": "Integration tests with API mocks",
+          "architectureDesign": "Bulkhead and backpressure",
+          "primaryDeliverable": "Reliability notes updated",
+          "searchText": "53 thu weekday 5 course schedule / topo sort service discovery or registry pattern centralized logging pipeline integration tests with api mocks bulkhead and backpressure reliability notes updated graphs, spring cloud patterns, observability, frontend testing, reliability phase 2: build systems"
+        },
+        {
+          "dayNumber": 54,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Clone Graph",
+          "javaSpring": "Resilience4j circuit breaker + retry",
+          "awsDevOps": "Health checks and autoscaling signals",
+          "reactFrontend": "E2E basics",
+          "architectureDesign": "Failure modes and chaos thinking",
+          "primaryDeliverable": "Add retry/circuit breaker to service",
+          "searchText": "54 fri weekday 5 clone graph resilience4j circuit breaker + retry health checks and autoscaling signals e2e basics failure modes and chaos thinking add retry/circuit breaker to service graphs, spring cloud patterns, observability, frontend testing, reliability phase 2: build systems"
+        },
+        {
+          "dayNumber": 55,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: 4 graph problems",
+          "javaSpring": "Instrument one microservice",
+          "awsDevOps": "Observe app in AWS",
+          "reactFrontend": "Test one full flow",
+          "architectureDesign": "Reliability review",
+          "primaryDeliverable": "Milestone: observable service",
+          "searchText": "55 sat weekend 8 weekend drill: 4 graph problems instrument one microservice observe app in aws test one full flow reliability review milestone: observable service graphs, spring cloud patterns, observability, frontend testing, reliability phase 2: build systems"
+        },
+        {
+          "dayNumber": 56,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Microservice recap",
+          "awsDevOps": "Observability recap",
+          "reactFrontend": "Testing recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update runbook",
+          "searchText": "56 sun weekend 8 weekly review + timed set microservice recap observability recap testing recap retrospective update runbook graphs, spring cloud patterns, observability, frontend testing, reliability phase 2: build systems"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 9,
+      "phaseLabel": "Phase 2: Build Systems",
+      "title": "DP basics, async Java, Redis patterns, TypeScript basics, caching strategy",
+      "summary": "Phase 2: Build Systems \u00b7 57-63",
+      "deliverables": [
+        "Milestone: cache-backed async feature",
+        "Update cheatsheets"
+      ],
+      "days": [
+        {
+          "dayNumber": 57,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Fibonacci / DP state",
+          "javaSpring": "Async APIs with CompletableFuture",
+          "awsDevOps": "Redis basics / ElastiCache concepts",
+          "reactFrontend": "TypeScript basics for React",
+          "architectureDesign": "Caching strategy selection",
+          "primaryDeliverable": "Add TS to one feature",
+          "searchText": "57 mon weekday 5 fibonacci / dp state async apis with completablefuture redis basics / elasticache concepts typescript basics for react caching strategy selection add ts to one feature dp basics, async java, redis patterns, typescript basics, caching strategy phase 2: build systems"
+        },
+        {
+          "dayNumber": 58,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Climbing Stairs",
+          "javaSpring": "Virtual threads vs pool decisions",
+          "awsDevOps": "Redis cache/session patterns",
+          "reactFrontend": "Typing props and state",
+          "architectureDesign": "Read-through vs write-through cache",
+          "primaryDeliverable": "Document virtual-thread use cases",
+          "searchText": "58 tue weekday 5 climbing stairs virtual threads vs pool decisions redis cache/session patterns typing props and state read-through vs write-through cache document virtual-thread use cases dp basics, async java, redis patterns, typescript basics, caching strategy phase 2: build systems"
+        },
+        {
+          "dayNumber": 59,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "House Robber",
+          "javaSpring": "Producer-consumer concurrency pattern",
+          "awsDevOps": "TTL, eviction, hot key issues",
+          "reactFrontend": "Typing API responses",
+          "architectureDesign": "Cache invalidation",
+          "primaryDeliverable": "Cache-enabled endpoint",
+          "searchText": "59 wed weekday 5 house robber producer-consumer concurrency pattern ttl, eviction, hot key issues typing api responses cache invalidation cache-enabled endpoint dp basics, async java, redis patterns, typescript basics, caching strategy phase 2: build systems"
+        },
+        {
+          "dayNumber": 60,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Unique Paths",
+          "javaSpring": "Asynchronous event processor",
+          "awsDevOps": "Benchmark cache impact",
+          "reactFrontend": "Generics in TS",
+          "architectureDesign": "Cache stampede / request coalescing",
+          "primaryDeliverable": "Measure latency before/after cache",
+          "searchText": "60 thu weekday 5 unique paths asynchronous event processor benchmark cache impact generics in ts cache stampede / request coalescing measure latency before/after cache dp basics, async java, redis patterns, typescript basics, caching strategy phase 2: build systems"
+        },
+        {
+          "dayNumber": 61,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Coin Change",
+          "javaSpring": "Async error handling and cancellation",
+          "awsDevOps": "CDN vs API cache recap",
+          "reactFrontend": "Strict mode / tsconfig cleanup",
+          "architectureDesign": "Choosing cache boundaries",
+          "primaryDeliverable": "TS cleanup + notes",
+          "searchText": "61 fri weekday 5 coin change async error handling and cancellation cdn vs api cache recap strict mode / tsconfig cleanup choosing cache boundaries ts cleanup + notes dp basics, async java, redis patterns, typescript basics, caching strategy phase 2: build systems"
+        },
+        {
+          "dayNumber": 62,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: 4 DP problems",
+          "javaSpring": "Async pipeline mini-project",
+          "awsDevOps": "Redis with Spring + AWS review",
+          "reactFrontend": "TS refactor day",
+          "architectureDesign": "Cache design review",
+          "primaryDeliverable": "Milestone: cache-backed async feature",
+          "searchText": "62 sat weekend 8 weekend drill: 4 dp problems async pipeline mini-project redis with spring + aws review ts refactor day cache design review milestone: cache-backed async feature dp basics, async java, redis patterns, typescript basics, caching strategy phase 2: build systems"
+        },
+        {
+          "dayNumber": 63,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Async recap",
+          "awsDevOps": "Cache recap",
+          "reactFrontend": "TS recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update cheatsheets",
+          "searchText": "63 sun weekend 8 weekly review + timed set async recap cache recap ts recap retrospective update cheatsheets dp basics, async java, redis patterns, typescript basics, caching strategy phase 2: build systems"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 10,
+      "phaseLabel": "Phase 3: Operate & Scale",
+      "title": "DP advanced, resilience, EKS concepts, design system, distributed transactions",
+      "summary": "Phase 3: Operate & Scale \u00b7 64-70",
+      "deliverables": [
+        "Milestone: resilient service patterns",
+        "Update ADRs"
+      ],
+      "days": [
+        {
+          "dayNumber": 64,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "0/1 knapsack",
+          "javaSpring": "Circuit breaker tuning",
+          "awsDevOps": "EKS concepts and trade-offs",
+          "reactFrontend": "Design tokens",
+          "architectureDesign": "Distributed transactions",
+          "primaryDeliverable": "Kubernetes notes matrix",
+          "searchText": "64 mon weekday 5 0/1 knapsack circuit breaker tuning eks concepts and trade-offs design tokens distributed transactions kubernetes notes matrix dp advanced, resilience, eks concepts, design system, distributed transactions phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 65,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "LCS",
+          "javaSpring": "Retries, timeouts, fallbacks",
+          "awsDevOps": "Kubernetes pods/services basics",
+          "reactFrontend": "Compound components",
+          "architectureDesign": "Saga choreography",
+          "primaryDeliverable": "Retries/fallback patterns added",
+          "searchText": "65 tue weekday 5 lcs retries, timeouts, fallbacks kubernetes pods/services basics compound components saga choreography retries/fallback patterns added dp advanced, resilience, eks concepts, design system, distributed transactions phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 66,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Edit distance",
+          "javaSpring": "Bulkhead and rate limiting",
+          "awsDevOps": "Ingress/config maps/secrets",
+          "reactFrontend": "Custom hook library",
+          "architectureDesign": "Saga orchestration",
+          "primaryDeliverable": "Rate limiter notes",
+          "searchText": "66 wed weekday 5 edit distance bulkhead and rate limiting ingress/config maps/secrets custom hook library saga orchestration rate limiter notes dp advanced, resilience, eks concepts, design system, distributed transactions phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 67,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "DP on strings/grid",
+          "javaSpring": "Load testing basics and performance profiling",
+          "awsDevOps": "ECS vs EKS decision",
+          "reactFrontend": "Component docs / Storybook-style approach",
+          "architectureDesign": "CQRS and event sourcing intro",
+          "primaryDeliverable": "Decision memo for ECS vs EKS",
+          "searchText": "67 thu weekday 5 dp on strings/grid load testing basics and performance profiling ecs vs eks decision component docs / storybook-style approach cqrs and event sourcing intro decision memo for ecs vs eks dp advanced, resilience, eks concepts, design system, distributed transactions phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 68,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Greedy interval crossover",
+          "javaSpring": "Graceful degradation patterns",
+          "awsDevOps": "Container orchestration recap",
+          "reactFrontend": "Composition patterns",
+          "architectureDesign": "Consistency trade-offs",
+          "primaryDeliverable": "Document degradation strategy",
+          "searchText": "68 fri weekday 5 greedy interval crossover graceful degradation patterns container orchestration recap composition patterns consistency trade-offs document degradation strategy dp advanced, resilience, eks concepts, design system, distributed transactions phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 69,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: advanced DP",
+          "javaSpring": "Resilience lab in Spring",
+          "awsDevOps": "K8s walkthrough / compare with ECS",
+          "reactFrontend": "Design system build",
+          "architectureDesign": "Architecture review",
+          "primaryDeliverable": "Milestone: resilient service patterns",
+          "searchText": "69 sat weekend 8 weekend drill: advanced dp resilience lab in spring k8s walkthrough / compare with ecs design system build architecture review milestone: resilient service patterns dp advanced, resilience, eks concepts, design system, distributed transactions phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 70,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Resilience recap",
+          "awsDevOps": "Container recap",
+          "reactFrontend": "Design-system recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update ADRs",
+          "searchText": "70 sun weekend 8 weekly review + timed set resilience recap container recap design-system recap retrospective update adrs dp advanced, resilience, eks concepts, design system, distributed transactions phase 3: operate & scale"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 11,
+      "phaseLabel": "Phase 3: Operate & Scale",
+      "title": "Greedy/intervals, architecture patterns in Java, cloud security, frontend architecture, threat modeling",
+      "summary": "Phase 3: Operate & Scale \u00b7 71-77",
+      "deliverables": [
+        "Milestone: security baseline",
+        "Update security checklist"
+      ],
+      "days": [
+        {
+          "dayNumber": 71,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Jump Game",
+          "javaSpring": "Factory/strategy patterns refresher",
+          "awsDevOps": "KMS encryption basics",
+          "reactFrontend": "Frontend folder architecture",
+          "architectureDesign": "Zero-trust and defense in depth",
+          "primaryDeliverable": "Encrypt one secret / note encryption flows",
+          "searchText": "71 mon weekday 5 jump game factory/strategy patterns refresher kms encryption basics frontend folder architecture zero-trust and defense in depth encrypt one secret / note encryption flows greedy/intervals, architecture patterns in java, cloud security, frontend architecture, threat modeling phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 72,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Meeting rooms / scheduling",
+          "javaSpring": "Immutability and value objects",
+          "awsDevOps": "Secrets Manager / Parameter Store",
+          "reactFrontend": "Route-level code splitting",
+          "architectureDesign": "OWASP Top 10 overview",
+          "primaryDeliverable": "Secret management checklist",
+          "searchText": "72 tue weekday 5 meeting rooms / scheduling immutability and value objects secrets manager / parameter store route-level code splitting owasp top 10 overview secret management checklist greedy/intervals, architecture patterns in java, cloud security, frontend architecture, threat modeling phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 73,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Merge intervals",
+          "javaSpring": "Clean architecture in Java",
+          "awsDevOps": "Cognito / auth service concepts",
+          "reactFrontend": "State at scale and query caching",
+          "architectureDesign": "API security and token validation",
+          "primaryDeliverable": "Threat model draft",
+          "searchText": "73 wed weekday 5 merge intervals clean architecture in java cognito / auth service concepts state at scale and query caching api security and token validation threat model draft greedy/intervals, architecture patterns in java, cloud security, frontend architecture, threat modeling phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 74,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Non-overlapping intervals",
+          "javaSpring": "Hexagonal architecture",
+          "awsDevOps": "WAF / Shield basics",
+          "reactFrontend": "Error boundaries",
+          "architectureDesign": "TLS, mTLS, private APIs",
+          "primaryDeliverable": "Add error boundary",
+          "searchText": "74 thu weekday 5 non-overlapping intervals hexagonal architecture waf / shield basics error boundaries tls, mtls, private apis add error boundary greedy/intervals, architecture patterns in java, cloud security, frontend architecture, threat modeling phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 75,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Task scheduler / PQ greedy mix",
+          "javaSpring": "Module boundaries and modular monolith vs microservice",
+          "awsDevOps": "Least-privilege IAM review",
+          "reactFrontend": "Build optimization",
+          "architectureDesign": "Threat modeling exercise",
+          "primaryDeliverable": "IAM review complete",
+          "searchText": "75 fri weekday 5 task scheduler / pq greedy mix module boundaries and modular monolith vs microservice least-privilege iam review build optimization threat modeling exercise iam review complete greedy/intervals, architecture patterns in java, cloud security, frontend architecture, threat modeling phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 76,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: greedy/intervals",
+          "javaSpring": "Refactor service with architecture pattern",
+          "awsDevOps": "Security hardening lab",
+          "reactFrontend": "Frontend architecture refactor",
+          "architectureDesign": "Security review",
+          "primaryDeliverable": "Milestone: security baseline",
+          "searchText": "76 sat weekend 8 weekend drill: greedy/intervals refactor service with architecture pattern security hardening lab frontend architecture refactor security review milestone: security baseline greedy/intervals, architecture patterns in java, cloud security, frontend architecture, threat modeling phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 77,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Pattern recap",
+          "awsDevOps": "Security recap",
+          "reactFrontend": "React architecture recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update security checklist",
+          "searchText": "77 sun weekend 8 weekly review + timed set pattern recap security recap react architecture recap retrospective update security checklist greedy/intervals, architecture patterns in java, cloud security, frontend architecture, threat modeling phase 3: operate & scale"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 12,
+      "phaseLabel": "Phase 3: Operate & Scale",
+      "title": "Backtracking/bit/math, CI/CD, IaC, build tooling, DevSecOps",
+      "summary": "Phase 3: Operate & Scale \u00b7 78-84",
+      "deliverables": [
+        "Milestone: automated build pipeline",
+        "Update runbooks"
+      ],
+      "days": [
+        {
+          "dayNumber": 78,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Subsets",
+          "javaSpring": "Maven lifecycle and plugins",
+          "awsDevOps": "CodeBuild / CodePipeline overview",
+          "reactFrontend": "Vite build pipeline",
+          "architectureDesign": "CI/CD principles",
+          "primaryDeliverable": "Pipeline plan drafted",
+          "searchText": "78 mon weekday 5 subsets maven lifecycle and plugins codebuild / codepipeline overview vite build pipeline ci/cd principles pipeline plan drafted backtracking/bit/math, ci/cd, iac, build tooling, devsecops phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 79,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Permutations",
+          "javaSpring": "GitHub Actions or Jenkins basics",
+          "awsDevOps": "Pipeline for Java app",
+          "reactFrontend": "Lint / format / pre-commit hooks",
+          "architectureDesign": "Artifact promotion",
+          "primaryDeliverable": "Backend CI working",
+          "searchText": "79 tue weekday 5 permutations github actions or jenkins basics pipeline for java app lint / format / pre-commit hooks artifact promotion backend ci working backtracking/bit/math, ci/cd, iac, build tooling, devsecops phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 80,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Combination Sum",
+          "javaSpring": "Testing strategy and coverage",
+          "awsDevOps": "CloudFormation basics",
+          "reactFrontend": "Environment config patterns",
+          "architectureDesign": "Branch strategy and release flow",
+          "primaryDeliverable": "Infra template created",
+          "searchText": "80 wed weekday 5 combination sum testing strategy and coverage cloudformation basics environment config patterns branch strategy and release flow infra template created backtracking/bit/math, ci/cd, iac, build tooling, devsecops phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 81,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "N-Queens / Word Search",
+          "javaSpring": "Jacoco / Sonar basics",
+          "awsDevOps": "Terraform basics and modules",
+          "reactFrontend": "Bundle analysis",
+          "architectureDesign": "Secret scanning and supply-chain basics",
+          "primaryDeliverable": "Frontend CI and quality checks",
+          "searchText": "81 thu weekday 5 n-queens / word search jacoco / sonar basics terraform basics and modules bundle analysis secret scanning and supply-chain basics frontend ci and quality checks backtracking/bit/math, ci/cd, iac, build tooling, devsecops phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 82,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Bit manipulation intro",
+          "javaSpring": "Versioning and release management",
+          "awsDevOps": "IaC state, drift, plan/apply",
+          "reactFrontend": "Source maps and frontend monitoring",
+          "architectureDesign": "DevSecOps checklist",
+          "primaryDeliverable": "IaC review complete",
+          "searchText": "82 fri weekday 5 bit manipulation intro versioning and release management iac state, drift, plan/apply source maps and frontend monitoring devsecops checklist iac review complete backtracking/bit/math, ci/cd, iac, build tooling, devsecops phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 83,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend drill: backtracking/bit",
+          "javaSpring": "Set up CI for backend",
+          "awsDevOps": "IaC lab",
+          "reactFrontend": "Frontend CI",
+          "architectureDesign": "Pipeline review",
+          "primaryDeliverable": "Milestone: automated build pipeline",
+          "searchText": "83 sat weekend 8 weekend drill: backtracking/bit set up ci for backend iac lab frontend ci pipeline review milestone: automated build pipeline backtracking/bit/math, ci/cd, iac, build tooling, devsecops phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 84,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + timed set",
+          "javaSpring": "Build-tool recap",
+          "awsDevOps": "IaC recap",
+          "reactFrontend": "Frontend-tooling recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update runbooks",
+          "searchText": "84 sun weekend 8 weekly review + timed set build-tool recap iac recap frontend-tooling recap retrospective update runbooks backtracking/bit/math, ci/cd, iac, build tooling, devsecops phase 3: operate & scale"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 13,
+      "phaseLabel": "Phase 3: Operate & Scale",
+      "title": "Mixed interview set, performance tuning, advanced networking, accessibility, cost/performance trade-offs",
+      "summary": "Phase 3: Operate & Scale \u00b7 85-91",
+      "deliverables": [
+        "Milestone: tuned and audited slice",
+        "Update scorecard"
+      ],
+      "days": [
+        {
+          "dayNumber": 85,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Mixed medium set 1",
+          "javaSpring": "JFR / JMC basics",
+          "awsDevOps": "Route 53 and DNS",
+          "reactFrontend": "Semantic HTML",
+          "architectureDesign": "Cost vs performance",
+          "primaryDeliverable": "Record first performance baseline",
+          "searchText": "85 mon weekday 5 mixed medium set 1 jfr / jmc basics route 53 and dns semantic html cost vs performance record first performance baseline mixed interview set, performance tuning, advanced networking, accessibility, cost/performance trade-offs phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 86,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Mixed medium set 2",
+          "javaSpring": "GC tuning flags",
+          "awsDevOps": "CloudFront",
+          "reactFrontend": "Keyboard navigation",
+          "architectureDesign": "RTO/RPO",
+          "primaryDeliverable": "CloudFront fronting app",
+          "searchText": "86 tue weekday 5 mixed medium set 2 gc tuning flags cloudfront keyboard navigation rto/rpo cloudfront fronting app mixed interview set, performance tuning, advanced networking, accessibility, cost/performance trade-offs phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 87,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Mixed medium set 3",
+          "javaSpring": "Heap/thread dump analysis",
+          "awsDevOps": "ACM / HTTPS",
+          "reactFrontend": "ARIA and labels",
+          "architectureDesign": "Multi-AZ vs multi-region",
+          "primaryDeliverable": "Accessibility checklist pass 1",
+          "searchText": "87 wed weekday 5 mixed medium set 3 heap/thread dump analysis acm / https aria and labels multi-az vs multi-region accessibility checklist pass 1 mixed interview set, performance tuning, advanced networking, accessibility, cost/performance trade-offs phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 88,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Mixed medium set 4",
+          "javaSpring": "Connection and thread-pool tuning",
+          "awsDevOps": "VPC endpoints / PrivateLink",
+          "reactFrontend": "Performance budgets",
+          "architectureDesign": "Scaling trade-offs",
+          "primaryDeliverable": "Private connectivity notes",
+          "searchText": "88 thu weekday 5 mixed medium set 4 connection and thread-pool tuning vpc endpoints / privatelink performance budgets scaling trade-offs private connectivity notes mixed interview set, performance tuning, advanced networking, accessibility, cost/performance trade-offs phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 89,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Mixed medium set 5",
+          "javaSpring": "DB/query profiling",
+          "awsDevOps": "Cost explorer / cost optimization review",
+          "reactFrontend": "Lighthouse audit",
+          "architectureDesign": "Cost optimization levers",
+          "primaryDeliverable": "Perf + cost review",
+          "searchText": "89 fri weekday 5 mixed medium set 5 db/query profiling cost explorer / cost optimization review lighthouse audit cost optimization levers perf + cost review mixed interview set, performance tuning, advanced networking, accessibility, cost/performance trade-offs phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 90,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend timed DSA mock",
+          "javaSpring": "Performance tuning lab",
+          "awsDevOps": "Global delivery lab",
+          "reactFrontend": "Accessibility audit",
+          "architectureDesign": "Well-Architected review",
+          "primaryDeliverable": "Milestone: tuned and audited slice",
+          "searchText": "90 sat weekend 8 weekend timed dsa mock performance tuning lab global delivery lab accessibility audit well-architected review milestone: tuned and audited slice mixed interview set, performance tuning, advanced networking, accessibility, cost/performance trade-offs phase 3: operate & scale"
+        },
+        {
+          "dayNumber": 91,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + mock corrections",
+          "javaSpring": "Performance recap",
+          "awsDevOps": "Networking recap",
+          "reactFrontend": "A11y recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update scorecard",
+          "searchText": "91 sun weekend 8 weekly review + mock corrections performance recap networking recap a11y recap retrospective update scorecard mixed interview set, performance tuning, advanced networking, accessibility, cost/performance trade-offs phase 3: operate & scale"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 14,
+      "phaseLabel": "Phase 4: Architect Mode",
+      "title": "System-design implementation, HA/DR, frontend monitoring, stakeholder communication",
+      "summary": "Phase 4: Architect Mode \u00b7 92-98",
+      "deliverables": [
+        "Milestone: design and explain",
+        "Update portfolio notes"
+      ],
+      "days": [
+        {
+          "dayNumber": 92,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Design-focused DSA mix 1",
+          "javaSpring": "Implement rate limiter",
+          "awsDevOps": "High-availability patterns",
+          "reactFrontend": "Frontend error logging",
+          "architectureDesign": "CAP trade-off exercise",
+          "primaryDeliverable": "Rate limiter proof of concept",
+          "searchText": "92 mon weekday 5 design-focused dsa mix 1 implement rate limiter high-availability patterns frontend error logging cap trade-off exercise rate limiter proof of concept system-design implementation, ha/dr, frontend monitoring, stakeholder communication phase 4: architect mode"
+        },
+        {
+          "dayNumber": 93,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Graph/DP mix",
+          "javaSpring": "Notification system design",
+          "awsDevOps": "Backup and disaster recovery",
+          "reactFrontend": "User analytics basics",
+          "architectureDesign": "Blue-green vs canary",
+          "primaryDeliverable": "DR strategy notes",
+          "searchText": "93 tue weekday 5 graph/dp mix notification system design backup and disaster recovery user analytics basics blue-green vs canary dr strategy notes system-design implementation, ha/dr, frontend monitoring, stakeholder communication phase 4: architect mode"
+        },
+        {
+          "dayNumber": 94,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Interval/backtracking mix",
+          "javaSpring": "URL shortener design",
+          "awsDevOps": "Autoscaling strategies",
+          "reactFrontend": "Web Vitals monitoring",
+          "architectureDesign": "Active-active vs active-passive",
+          "primaryDeliverable": "Architecture diagram v1",
+          "searchText": "94 wed weekday 5 interval/backtracking mix url shortener design autoscaling strategies web vitals monitoring active-active vs active-passive architecture diagram v1 system-design implementation, ha/dr, frontend monitoring, stakeholder communication phase 4: architect mode"
+        },
+        {
+          "dayNumber": 95,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Timed mock",
+          "javaSpring": "File upload system design",
+          "awsDevOps": "Database failover",
+          "reactFrontend": "Feature flags",
+          "architectureDesign": "Architecture decision records",
+          "primaryDeliverable": "ADR set started",
+          "searchText": "95 thu weekday 5 timed mock file upload system design database failover feature flags architecture decision records adr set started system-design implementation, ha/dr, frontend monitoring, stakeholder communication phase 4: architect mode"
+        },
+        {
+          "dayNumber": 96,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Timed mock",
+          "javaSpring": "Payment system design",
+          "awsDevOps": "Queue buffering and decoupling",
+          "reactFrontend": "Distributed tracing across UI/API",
+          "architectureDesign": "Stakeholder communication and trade-off presentation",
+          "primaryDeliverable": "Prepare 5-minute design talk",
+          "searchText": "96 fri weekday 5 timed mock payment system design queue buffering and decoupling distributed tracing across ui/api stakeholder communication and trade-off presentation prepare 5-minute design talk system-design implementation, ha/dr, frontend monitoring, stakeholder communication phase 4: architect mode"
+        },
+        {
+          "dayNumber": 97,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend mock interview + design round",
+          "javaSpring": "Implement one design slice",
+          "awsDevOps": "DR walkthrough",
+          "reactFrontend": "Monitoring dashboard",
+          "architectureDesign": "Architecture review",
+          "primaryDeliverable": "Milestone: design and explain",
+          "searchText": "97 sat weekend 8 weekend mock interview + design round implement one design slice dr walkthrough monitoring dashboard architecture review milestone: design and explain system-design implementation, ha/dr, frontend monitoring, stakeholder communication phase 4: architect mode"
+        },
+        {
+          "dayNumber": 98,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + corrections",
+          "javaSpring": "System design recap",
+          "awsDevOps": "HA/DR recap",
+          "reactFrontend": "Monitoring recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update portfolio notes",
+          "searchText": "98 sun weekend 8 weekly review + corrections system design recap ha/dr recap monitoring recap retrospective update portfolio notes system-design implementation, ha/dr, frontend monitoring, stakeholder communication phase 4: architect mode"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 15,
+      "phaseLabel": "Phase 4: Architect Mode",
+      "title": "GenAI basics, LLM integration, RAG, chat UI, AI architecture and governance",
+      "summary": "Phase 4: Architect Mode \u00b7 99-105",
+      "deliverables": [
+        "Milestone: GenAI slice",
+        "Update AI design notes"
+      ],
+      "days": [
+        {
+          "dayNumber": 99,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Weak-area DSA set 1",
+          "javaSpring": "Integrate an LLM API from Java",
+          "awsDevOps": "S3 knowledge-base basics",
+          "reactFrontend": "Chat UI skeleton",
+          "architectureDesign": "Prompt engineering basics",
+          "primaryDeliverable": "Hello-world AI endpoint",
+          "searchText": "99 mon weekday 5 weak-area dsa set 1 integrate an llm api from java s3 knowledge-base basics chat ui skeleton prompt engineering basics hello-world ai endpoint genai basics, llm integration, rag, chat ui, ai architecture and governance phase 4: architect mode"
+        },
+        {
+          "dayNumber": 100,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Weak-area DSA set 2",
+          "javaSpring": "Embeddings and vector DB concepts",
+          "awsDevOps": "Document ingestion pipeline",
+          "reactFrontend": "Streaming response UI",
+          "architectureDesign": "RAG architecture",
+          "primaryDeliverable": "Document ingestion flow drafted",
+          "searchText": "100 tue weekday 5 weak-area dsa set 2 embeddings and vector db concepts document ingestion pipeline streaming response ui rag architecture document ingestion flow drafted genai basics, llm integration, rag, chat ui, ai architecture and governance phase 4: architect mode"
+        },
+        {
+          "dayNumber": 101,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Weak-area DSA set 3",
+          "javaSpring": "Chunking and retrieval orchestration",
+          "awsDevOps": "Async processing for ingestion",
+          "reactFrontend": "Chat state management",
+          "architectureDesign": "Grounding and hallucination controls",
+          "primaryDeliverable": "Ingestion job prototype",
+          "searchText": "101 wed weekday 5 weak-area dsa set 3 chunking and retrieval orchestration async processing for ingestion chat state management grounding and hallucination controls ingestion job prototype genai basics, llm integration, rag, chat ui, ai architecture and governance phase 4: architect mode"
+        },
+        {
+          "dayNumber": 102,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Weak-area DSA set 4",
+          "javaSpring": "Guardrails and output validation",
+          "awsDevOps": "Auth/rate limits for AI features",
+          "reactFrontend": "Citation UI patterns",
+          "architectureDesign": "AI security and privacy",
+          "primaryDeliverable": "Guardrails checklist",
+          "searchText": "102 thu weekday 5 weak-area dsa set 4 guardrails and output validation auth/rate limits for ai features citation ui patterns ai security and privacy guardrails checklist genai basics, llm integration, rag, chat ui, ai architecture and governance phase 4: architect mode"
+        },
+        {
+          "dayNumber": 103,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Weak-area DSA set 5",
+          "javaSpring": "Evaluation of prompts/responses",
+          "awsDevOps": "Latency and cost controls for AI",
+          "reactFrontend": "Conversation memory patterns",
+          "architectureDesign": "GenAI product trade-offs",
+          "primaryDeliverable": "Evaluation rubric created",
+          "searchText": "103 fri weekday 5 weak-area dsa set 5 evaluation of prompts/responses latency and cost controls for ai conversation memory patterns genai product trade-offs evaluation rubric created genai basics, llm integration, rag, chat ui, ai architecture and governance phase 4: architect mode"
+        },
+        {
+          "dayNumber": 104,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend build: RAG prototype",
+          "javaSpring": "Backend + retrieval integration",
+          "awsDevOps": "Storage and async pipeline review",
+          "reactFrontend": "Polish chat UX",
+          "architectureDesign": "AI architecture review",
+          "primaryDeliverable": "Milestone: GenAI slice",
+          "searchText": "104 sat weekend 8 weekend build: rag prototype backend + retrieval integration storage and async pipeline review polish chat ux ai architecture review milestone: genai slice genai basics, llm integration, rag, chat ui, ai architecture and governance phase 4: architect mode"
+        },
+        {
+          "dayNumber": 105,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekly review + risk list",
+          "javaSpring": "AI backend recap",
+          "awsDevOps": "AWS recap",
+          "reactFrontend": "UI recap",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update AI design notes",
+          "searchText": "105 sun weekend 8 weekly review + risk list ai backend recap aws recap ui recap retrospective update ai design notes genai basics, llm integration, rag, chat ui, ai architecture and governance phase 4: architect mode"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 16,
+      "phaseLabel": "Phase 4: Architect Mode",
+      "title": "Capstone planning and build sprint 1: domain model, auth, core services, routing, NFRs",
+      "summary": "Phase 4: Architect Mode \u00b7 106-112",
+      "deliverables": [
+        "Staging demo",
+        "Update gap list"
+      ],
+      "days": [
+        {
+          "dayNumber": 106,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Timed DSA mock 1",
+          "javaSpring": "Capstone scope and domain model",
+          "awsDevOps": "Choose AWS reference architecture",
+          "reactFrontend": "App shell and route map",
+          "architectureDesign": "NFRs and acceptance criteria",
+          "primaryDeliverable": "Capstone backlog and architecture v1",
+          "searchText": "106 mon weekday 5 timed dsa mock 1 capstone scope and domain model choose aws reference architecture app shell and route map nfrs and acceptance criteria capstone backlog and architecture v1 capstone planning and build sprint 1: domain model, auth, core services, routing, nfrs phase 4: architect mode"
+        },
+        {
+          "dayNumber": 107,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "DSA correction day",
+          "javaSpring": "Auth/user service",
+          "awsDevOps": "Networking and IAM setup",
+          "reactFrontend": "Layout and auth flow",
+          "architectureDesign": "ADR 1",
+          "primaryDeliverable": "Working auth skeleton",
+          "searchText": "107 tue weekday 5 dsa correction day auth/user service networking and iam setup layout and auth flow adr 1 working auth skeleton capstone planning and build sprint 1: domain model, auth, core services, routing, nfrs phase 4: architect mode"
+        },
+        {
+          "dayNumber": 108,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "DSA weak-area review",
+          "javaSpring": "Core business service",
+          "awsDevOps": "Database and storage setup",
+          "reactFrontend": "API client and data flow",
+          "architectureDesign": "ADR 2",
+          "primaryDeliverable": "Core API running",
+          "searchText": "108 wed weekday 5 dsa weak-area review core business service database and storage setup api client and data flow adr 2 core api running capstone planning and build sprint 1: domain model, auth, core services, routing, nfrs phase 4: architect mode"
+        },
+        {
+          "dayNumber": 109,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "DSA weak-area review",
+          "javaSpring": "Async/event service",
+          "awsDevOps": "Queue/cache integration",
+          "reactFrontend": "Feature pages build",
+          "architectureDesign": "Test plan",
+          "primaryDeliverable": "Async flow implemented",
+          "searchText": "109 thu weekday 5 dsa weak-area review async/event service queue/cache integration feature pages build test plan async flow implemented capstone planning and build sprint 1: domain model, auth, core services, routing, nfrs phase 4: architect mode"
+        },
+        {
+          "dayNumber": 110,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "DSA weak-area review",
+          "javaSpring": "Integration tests for backend",
+          "awsDevOps": "Monitoring and security baseline",
+          "reactFrontend": "UX polish",
+          "architectureDesign": "Deployment checklist",
+          "primaryDeliverable": "Staging-ready baseline",
+          "searchText": "110 fri weekday 5 dsa weak-area review integration tests for backend monitoring and security baseline ux polish deployment checklist staging-ready baseline capstone planning and build sprint 1: domain model, auth, core services, routing, nfrs phase 4: architect mode"
+        },
+        {
+          "dayNumber": 111,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Full mock + build sprint",
+          "javaSpring": "Capstone sprint day",
+          "awsDevOps": "Deploy staging",
+          "reactFrontend": "Hook up UI to APIs",
+          "architectureDesign": "Architecture review",
+          "primaryDeliverable": "Staging demo",
+          "searchText": "111 sat weekend 8 full mock + build sprint capstone sprint day deploy staging hook up ui to apis architecture review staging demo capstone planning and build sprint 1: domain model, auth, core services, routing, nfrs phase 4: architect mode"
+        },
+        {
+          "dayNumber": 112,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Bug-fix and review",
+          "javaSpring": "Refactor core modules",
+          "awsDevOps": "Cost review",
+          "reactFrontend": "Refine UX",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Update gap list",
+          "searchText": "112 sun weekend 8 bug-fix and review refactor core modules cost review refine ux retrospective update gap list capstone planning and build sprint 1: domain model, auth, core services, routing, nfrs phase 4: architect mode"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 17,
+      "phaseLabel": "Phase 4: Architect Mode",
+      "title": "Capstone sprint 2: optimization, security, DR, docs, presentation",
+      "summary": "Phase 4: Architect Mode \u00b7 113-119",
+      "deliverables": [
+        "Milestone: end-to-end solution",
+        "Prepare final assessment"
+      ],
+      "days": [
+        {
+          "dayNumber": 113,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Timed DSA mock 2",
+          "javaSpring": "Optimize service hotspots",
+          "awsDevOps": "Autoscaling and cost controls",
+          "reactFrontend": "Frontend performance fixes",
+          "architectureDesign": "Architecture diagram",
+          "primaryDeliverable": "Perf baseline v2",
+          "searchText": "113 mon weekday 5 timed dsa mock 2 optimize service hotspots autoscaling and cost controls frontend performance fixes architecture diagram perf baseline v2 capstone sprint 2: optimization, security, dr, docs, presentation phase 4: architect mode"
+        },
+        {
+          "dayNumber": 114,
+          "dayType": "Tue \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Timed DSA mock 3",
+          "javaSpring": "Security hardening",
+          "awsDevOps": "CloudFront/WAF/Route53 if relevant",
+          "reactFrontend": "Frontend tests",
+          "architectureDesign": "Runbook",
+          "primaryDeliverable": "Security checklist pass",
+          "searchText": "114 tue weekday 5 timed dsa mock 3 security hardening cloudfront/waf/route53 if relevant frontend tests runbook security checklist pass capstone sprint 2: optimization, security, dr, docs, presentation phase 4: architect mode"
+        },
+        {
+          "dayNumber": 115,
+          "dayType": "Wed \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Timed DSA mock 4",
+          "javaSpring": "Failure handling and retries",
+          "awsDevOps": "Backups and DR review",
+          "reactFrontend": "Accessibility fixes",
+          "architectureDesign": "Incident scenarios",
+          "primaryDeliverable": "DR notes finalized",
+          "searchText": "115 wed weekday 5 timed dsa mock 4 failure handling and retries backups and dr review accessibility fixes incident scenarios dr notes finalized capstone sprint 2: optimization, security, dr, docs, presentation phase 4: architect mode"
+        },
+        {
+          "dayNumber": 116,
+          "dayType": "Thu \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Timed DSA mock 5",
+          "javaSpring": "Final code cleanup",
+          "awsDevOps": "CI/CD hardening",
+          "reactFrontend": "Final production build",
+          "architectureDesign": "Presentation draft",
+          "primaryDeliverable": "Release candidate",
+          "searchText": "116 thu weekday 5 timed dsa mock 5 final code cleanup ci/cd hardening final production build presentation draft release candidate capstone sprint 2: optimization, security, dr, docs, presentation phase 4: architect mode"
+        },
+        {
+          "dayNumber": 117,
+          "dayType": "Fri \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Timed DSA mock 6",
+          "javaSpring": "Mock architect presentation",
+          "awsDevOps": "Final Well-Architected review",
+          "reactFrontend": "Metrics dashboard",
+          "architectureDesign": "Resume bullets and portfolio notes",
+          "primaryDeliverable": "Presentation rehearsal",
+          "searchText": "117 fri weekday 5 timed dsa mock 6 mock architect presentation final well-architected review metrics dashboard resume bullets and portfolio notes presentation rehearsal capstone sprint 2: optimization, security, dr, docs, presentation phase 4: architect mode"
+        },
+        {
+          "dayNumber": 118,
+          "dayType": "Sat \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Weekend end-to-end demo",
+          "javaSpring": "Capstone polish and bugfix",
+          "awsDevOps": "Deployment validation",
+          "reactFrontend": "UX polish and docs",
+          "architectureDesign": "Stakeholder-style Q&A",
+          "primaryDeliverable": "Milestone: end-to-end solution",
+          "searchText": "118 sat weekend 8 weekend end-to-end demo capstone polish and bugfix deployment validation ux polish and docs stakeholder-style q&a milestone: end-to-end solution capstone sprint 2: optimization, security, dr, docs, presentation phase 4: architect mode"
+        },
+        {
+          "dayNumber": 119,
+          "dayType": "Sun \u00b7 Weekend",
+          "hours": "8h",
+          "dsaFocus": "Final week retrospective",
+          "javaSpring": "Gap closure",
+          "awsDevOps": "Ops checklist",
+          "reactFrontend": "UI checklist",
+          "architectureDesign": "Retrospective",
+          "primaryDeliverable": "Prepare final assessment",
+          "searchText": "119 sun weekend 8 final week retrospective gap closure ops checklist ui checklist retrospective prepare final assessment capstone sprint 2: optimization, security, dr, docs, presentation phase 4: architect mode"
+        }
+      ],
+      "accent": "#2e6ca5"
+    },
+    {
+      "weekNumber": 18,
+      "phaseLabel": "Phase 4: Architect Mode",
+      "title": "Final consolidation and architect presentation",
+      "summary": "Phase 4: Architect Mode \u00b7 120-120",
+      "deliverables": [
+        "Final recap / continuation notes"
+      ],
+      "days": [
+        {
+          "dayNumber": 120,
+          "dayType": "Mon \u00b7 Weekday",
+          "hours": "5h",
+          "dsaFocus": "Final DSA mock + pattern sheet",
+          "javaSpring": "Java/Spring final recap and interview notes",
+          "awsDevOps": "AWS SAA-style domain review + Well-Architected review",
+          "reactFrontend": "React/frontend architecture final recap",
+          "architectureDesign": "Final solution-architect presentation + next 90-day plan",
+          "primaryDeliverable": "Record what to continue after Day 120",
+          "searchText": "120 mon weekday 5 final dsa mock + pattern sheet java/spring final recap and interview notes aws saa-style domain review + well-architected review react/frontend architecture final recap final solution-architect presentation + next 90-day plan record what to continue after day 120 final consolidation and architect presentation phase 4: architect mode"
+        }
+      ],
+      "accent": "#2e6ca5"
+    }
+  ],
+  "artifacts": [
+    {
+      "week": "Week 5",
+      "day": "Day 30",
+      "title": "Problem statement & NFRs",
+      "description": "Define users, scope, FRs, NFRs, success metrics",
+      "dependency": "Depends on: Discovery + Overview"
+    },
+    {
+      "week": "Week 5",
+      "day": "Day 30",
+      "title": "Context diagram",
+      "description": "System boundary and external actors",
+      "dependency": "Depends on: Problem statement & NFRs"
+    },
+    {
+      "week": "Week 7",
+      "day": "Day 45",
+      "title": "High-level architecture",
+      "description": "Major services, data stores, and integrations",
+      "dependency": "Depends on: Context diagram"
+    },
+    {
+      "week": "Week 7",
+      "day": "Day 45",
+      "title": "API specification",
+      "description": "Core API contracts and error model",
+      "dependency": "Depends on: High-level architecture"
+    },
+    {
+      "week": "Week 7",
+      "day": "Day 45",
+      "title": "Data model",
+      "description": "Entities, indexes, and storage choices",
+      "dependency": "Depends on: High-level architecture"
+    },
+    {
+      "week": "Week 9",
+      "day": "Day 60",
+      "title": "Async/event flow",
+      "description": "Outbox/event path, retries, and DLQ choices",
+      "dependency": "Depends on: High-level architecture"
+    },
+    {
+      "week": "Week 9",
+      "day": "Day 60",
+      "title": "Deployment diagram",
+      "description": "AWS deployment shape, networking, IAM, and runtime",
+      "dependency": "Depends on: High-level architecture"
+    },
+    {
+      "week": "Week 11",
+      "day": "Day 75",
+      "title": "Security baseline",
+      "description": "AuthN/AuthZ, secrets, encryption, audit logging",
+      "dependency": "Depends on: Deployment diagram"
+    },
+    {
+      "week": "Week 11",
+      "day": "Day 75",
+      "title": "Observability plan",
+      "description": "Logs, metrics, traces, alarms, SLIs/SLOs",
+      "dependency": "Depends on: Deployment diagram"
+    },
+    {
+      "week": "Week 13",
+      "day": "Day 90",
+      "title": "ADR set (5 decisions)",
+      "description": "Document major trade-offs and rejected options",
+      "dependency": "Depends on: High-level architecture"
+    },
+    {
+      "week": "Week 13",
+      "day": "Day 90",
+      "title": "Runbook",
+      "description": "Failure response, restart, smoke tests, rollback steps",
+      "dependency": "Depends on: Observability plan"
+    },
+    {
+      "week": "Week 15",
+      "day": "Day 105",
+      "title": "Cost estimate",
+      "description": "Service choices, scaling assumptions, cost levers",
+      "dependency": "Depends on: Deployment diagram"
+    },
+    {
+      "week": "Week 15",
+      "day": "Day 105",
+      "title": "HA / DR plan",
+      "description": "RTO/RPO, failover posture, backups, recovery steps",
+      "dependency": "Depends on: Runbook"
+    },
+    {
+      "week": "Week 18",
+      "day": "Day 120",
+      "title": "Presentation deck",
+      "description": "10-15 minute architect walkthrough",
+      "dependency": "Depends on: All previous artifacts"
+    },
+    {
+      "week": "Week 18",
+      "day": "Day 120",
+      "title": "Mock design Q&A",
+      "description": "Practice stakeholder defense and trade-offs",
+      "dependency": "Depends on: Presentation deck"
+    },
+    {
+      "week": "Week 18",
+      "day": "Day 120",
+      "title": "Resume / portfolio bullets",
+      "description": "Turn the work into interview language",
+      "dependency": "Depends on: Presentation deck"
+    }
+  ],
+  "screens": [
+    {
+      "title": "Dashboard control panel",
+      "description": "Set the start date, watch completion, and monitor milestone readiness from a single command center.",
+      "image": "/images/screen-1.png"
+    },
+    {
+      "title": "Weekly tracker",
+      "description": "Run the plan day by day: hours, status, evidence, blockers, next action, and review dates.",
+      "image": "/images/screen-2.png"
+    },
+    {
+      "title": "Capstone & system design tracker",
+      "description": "Turn design exercises and the capstone into visible proof: artifacts, dependencies, reviews, and presentation readiness.",
+      "image": "/images/screen-3.png"
+    }
+  ],
+  "designSprints": [
+    {
+      "title": "Rate limiter design",
+      "description": "Token vs leaky bucket, storage, scale, and multi-node consistency."
+    },
+    {
+      "title": "Notification system design",
+      "description": "Channels, retries, templates, preferences, and failure handling."
+    },
+    {
+      "title": "URL shortener design",
+      "description": "Read/write path, slug generation, caching, and scaling model."
+    },
+    {
+      "title": "File upload system design",
+      "description": "Pre-signed URLs, virus scan, storage lifecycle, and async processing."
+    },
+    {
+      "title": "Payment system design",
+      "description": "Idempotency, ledgering, reconciliation, and failure handling."
+    },
+    {
+      "title": "Weekend mock design round",
+      "description": "Requirements, NFRs, trade-offs, and stakeholder communication."
+    }
+  ],
+  "downloads": [
+    {
+      "label": "Tracker workbook",
+      "description": "Execution tracker with scorecards, dashboards, concepts, and weekly review sheets.",
+      "url": "/downloads/solution_architect_120_day_tracker_workbook.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "PDF brochure",
+      "description": "Designed 8-page brochure version of the curriculum path and value proposition.",
+      "url": "/downloads/solution_architect_120_day_brochure.pdf",
+      "type": "pdf"
+    },
+    {
+      "label": "Editable PPTX brochure",
+      "description": "PowerPoint source for customizing the brochure design and messaging.",
+      "url": "/downloads/solution_architect_120_day_brochure.pptx",
+      "type": "pptx"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      NODE_ENV: production
+      CLIENT_URL: http://localhost:5000
+      JWT_SECRET: change-this-before-prod
+      MONGO_URI: mongodb://mongo:27017/education_portal
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:

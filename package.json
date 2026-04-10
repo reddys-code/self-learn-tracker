@@ -1,0 +1,15 @@
+{
+  "name": "solution-architect-education-portal",
+  "version": "3.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter solution-architect-roadmap-server dev\" \"pnpm --filter solution-architect-roadmap-client dev\"",
+    "build": "pnpm --filter solution-architect-roadmap-client build && pnpm --filter solution-architect-roadmap-server build",
+    "seed": "pnpm --filter solution-architect-roadmap-server seed",
+    "start": "pnpm --filter solution-architect-roadmap-server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
