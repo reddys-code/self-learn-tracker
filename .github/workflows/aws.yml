@@ -21,7 +21,7 @@ jobs:
       - name: Run new container
         run: |
           sudo docker run -d \
-            -p 80:5173 \
+            -p 5173:5173 \
             -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
             --name cicd-pipeline-container \
             vishnu3332/planner:latest
