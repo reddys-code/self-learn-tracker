@@ -17,6 +17,7 @@ export function Navbar() {
           <Link to="/">Catalog</Link>
           <a href="#features">Features</a>
           <a href="#features">Courses</a>
+          <Link to="/theme-demo">Theme demo</Link>
         </nav>
 
         <div className="nav-cta-row">
