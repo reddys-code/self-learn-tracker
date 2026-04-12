@@ -269,33 +269,34 @@ function OverviewTab({ weeklyProgress = [], blockedCount, activeCount, completed
         </svg>
       </div>
 
-      <div className="prm-achievement-column">
-        <div className="prm-note-card">
-          <strong>Current operating signal</strong>
-          {blockedCount
-            ? `${blockedCount} blocker${blockedCount === 1 ? '' : 's'} needs intervention before the next delivery wave accelerates.`
-            : 'No active blockers. The roadmap is moving with clean execution cadence.'}
-        </div>
-        <div className="prm-note-card">
-          <strong>Most recent checkpoint</strong>
-          {latestUpdatedDay ? `Day ${latestUpdatedDay} carries the freshest update in the tracker.` : 'No day has been updated yet.'}
-        </div>
-        <div className="prm-note-card">
-          <strong>Completion posture</strong>
-          {`${completedCount} of ${totalDays} days are fully closed and ${activeCount} day${activeCount === 1 ? '' : 's'} are still active.`}
-        </div>
-      </div>
-
-      <div className="prm-achievement-column">
-        {weeklyProgress.slice(0, 5).map((week) => (
-          <div className="prm-note-card compact" key={`overview-week-${week.weekNumber}`}>
-            <div className="prm-between">
-              <strong>Week {week.weekNumber}</strong>
-              <span>{week.percent}%</span>
-            </div>
-            <p>{week.title}</p>
+      <div className="prm-overview-side">
+        <div className="prm-achievement-column">
+          <div className="prm-note-card">
+            <strong>Current operating signal</strong>
+            {blockedCount
+              ? `${blockedCount} blocker${blockedCount === 1 ? '' : 's'} needs intervention before the next delivery wave accelerates.`
+              : 'No active blockers. The roadmap is moving with clean execution cadence.'}
           </div>
-        ))}
+          <div className="prm-note-card">
+            <strong>Most recent checkpoint</strong>
+            {latestUpdatedDay ? `Day ${latestUpdatedDay} carries the freshest update in the tracker.` : 'No day has been updated yet.'}
+          </div>
+          <div className="prm-note-card">
+            <strong>Completion posture</strong>
+            {`${completedCount} of ${totalDays} days are fully closed and ${activeCount} day${activeCount === 1 ? '' : 's'} are still active.`}
+          </div>
+        </div>
+        <div className="prm-achievement-column">
+          {weeklyProgress.slice(0, 5).map((week) => (
+            <div className="prm-note-card compact" key={`overview-week-${week.weekNumber}`}>
+              <div className="prm-between">
+                <strong>Week {week.weekNumber}</strong>
+                <span>{week.percent}%</span>
+              </div>
+              <p>{week.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -313,51 +314,57 @@ function AnalyticsTab({ statusCounts, phaseProgress = [], weeklyProgress = [] })
 
   return (
     <div className="prm-analytics-grid">
-      <div className="prm-bar-stack">
+      <div className="prm-bar-stack prm-bar-stack-phase">
         <div className="prm-subhead">Phase progress</div>
-        {phaseProgress.map((item) => (
-          <div className="prm-bar-card" key={`phase-${item.phaseLabel}`}>
-            <div className="prm-between">
-              <strong>{item.phaseLabel}</strong>
-              <span>{item.percent}%</span>
-            </div>
-            <div className="prm-progress-track small">
-              <div className="prm-progress-fill" style={{ width: `${item.percent}%` }} />
-            </div>
-            <small>{item.complete} of {item.totalDays} days completed</small>
-          </div>
-        ))}
-      </div>
-
-      <div className="prm-bar-stack">
-        <div className="prm-subhead">Status distribution</div>
-        {statusBars.map((item) => {
-          const width = Math.max(8, Math.round((item.value / largestStatus) * 100));
-          return (
-            <div className="prm-bar-card" key={`status-${item.label}`}>
+        <div className="prm-bar-stack-grid">
+          {phaseProgress.map((item) => (
+            <div className="prm-bar-card" key={`phase-${item.phaseLabel}`}>
               <div className="prm-between">
-                <strong>{item.label}</strong>
-                <span>{item.value}</span>
+                <strong>{item.phaseLabel}</strong>
+                <span>{item.percent}%</span>
               </div>
               <div className="prm-progress-track small">
-                <div className="prm-progress-fill alt" style={{ width: `${width}%` }} />
+                <div className="prm-progress-fill" style={{ width: `${item.percent}%` }} />
               </div>
+              <small>{item.complete} of {item.totalDays} days completed</small>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
 
-      <div className="prm-bar-stack">
+      <div className="prm-bar-stack prm-bar-stack-status">
+        <div className="prm-subhead">Status distribution</div>
+        <div className="prm-bar-stack-grid">
+          {statusBars.map((item) => {
+            const width = Math.max(8, Math.round((item.value / largestStatus) * 100));
+            return (
+              <div className="prm-bar-card" key={`status-${item.label}`}>
+                <div className="prm-between">
+                  <strong>{item.label}</strong>
+                  <span>{item.value}</span>
+                </div>
+                <div className="prm-progress-track small">
+                  <div className="prm-progress-fill alt" style={{ width: `${width}%` }} />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="prm-bar-stack prm-bar-stack-velocity">
         <div className="prm-subhead">Weekly velocity</div>
-        {weeklyProgress.slice(0, 6).map((item) => (
-          <div className="prm-bar-card" key={`velocity-${item.weekNumber}`}>
-            <div className="prm-between">
-              <strong>Week {item.weekNumber}</strong>
-              <span>{item.percent}%</span>
+        <div className="prm-bar-stack-grid">
+          {weeklyProgress.slice(0, 6).map((item) => (
+            <div className="prm-bar-card" key={`velocity-${item.weekNumber}`}>
+              <div className="prm-between">
+                <strong>Week {item.weekNumber}</strong>
+                <span>{item.percent}%</span>
+              </div>
+              <p>{item.title}</p>
             </div>
-            <p>{item.title}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -652,7 +659,7 @@ export function PremiumRoadmapTracker({
   const timelineDays = days;
 
   return (
-    <div className="premium-roadmap-shell">
+    <div className="premium-roadmap-shell roadmap-redesign">
       <div className="premium-roadmap-bg" aria-hidden="true">
         <div className="prm-orb prm-orb-one" />
         <div className="prm-orb prm-orb-two" />
@@ -711,12 +718,28 @@ export function PremiumRoadmapTracker({
         <section className="prm-layout">
           <div className="prm-main-stack">
             <article className="prm-panel prm-card">
-              <div className="prm-panel-head">
-                <div>
+              <div className="prm-cockpit-head">
+                <div className="prm-cockpit-intro">
                   <h2 className="prm-title">Program cockpit</h2>
                   <p className="prm-subtitle">A premium overview of delivery pace, weekly momentum, materials, and course health.</p>
                 </div>
-                <div className="prm-chip-row">
+
+                <div className="prm-cockpit-stats" aria-label="Program cockpit summary">
+                  <div className="prm-cockpit-stat">
+                    <span>Completion</span>
+                    <strong>{courseCompletionPct}%</strong>
+                  </div>
+                  <div className="prm-cockpit-stat">
+                    <span>Readiness</span>
+                    <strong>{readinessScore}</strong>
+                  </div>
+                  <div className="prm-cockpit-stat">
+                    <span>Blockers</span>
+                    <strong>{blockedCount}</strong>
+                  </div>
+                </div>
+
+                <div className="prm-chip-row prm-cockpit-chips">
                   {chipValues.map((chip) => (
                     <span key={`cockpit-${chip}`} className="prm-chip">{chip}</span>
                   ))}
@@ -744,7 +767,7 @@ export function PremiumRoadmapTracker({
                 <button type="button" className={`prm-tab-btn ${activeTab === 'materials' ? 'active' : ''}`} onClick={() => setActiveTab('materials')}>Materials</button>
               </div>
 
-              <div className="prm-tab-surface">
+              <div className={`prm-tab-surface panel-${activeTab}`}>
                 {activeTab === 'overview' ? (
                   <OverviewTab
                     weeklyProgress={weeklyProgress}

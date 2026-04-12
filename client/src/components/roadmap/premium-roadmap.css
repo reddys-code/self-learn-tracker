@@ -294,9 +294,9 @@
 }
 
 .prm-btn-secondary {
-  color: #d8e2ff;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--prm-text);
+  background: color-mix(in srgb, var(--prm-panel) 88%, transparent);
+  border: 1px solid var(--prm-line-2);
 }
 
 .full-width {
@@ -412,6 +412,50 @@
   margin-bottom: 16px;
 }
 
+.prm-cockpit-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 14px;
+  margin-bottom: 16px;
+  align-items: start;
+}
+
+.prm-cockpit-intro {
+  min-width: 0;
+}
+
+.prm-cockpit-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.prm-cockpit-stat {
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--prm-line-2) 80%, transparent);
+  background: color-mix(in srgb, var(--prm-panel) 92%, transparent);
+  padding: 10px 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.prm-cockpit-stat span {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--prm-muted);
+  font-weight: 700;
+}
+
+.prm-cockpit-stat strong {
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.prm-cockpit-chips {
+  grid-column: 1 / -1;
+}
+
 .prm-panel-head.compact {
   margin-bottom: 12px;
 }
@@ -491,7 +535,7 @@
 .prm-filter-btn {
   border: 1px solid rgba(255,255,255,0.1);
   background: rgba(255,255,255,0.04);
-  color: #d8e1f5;
+  color: var(--prm-text);
   border-radius: 999px;
   padding: 10px 14px;
   font: inherit;
@@ -507,16 +551,24 @@
 .prm-filter-btn:hover {
   background: rgba(111, 143, 255, 0.18);
   border-color: rgba(111, 143, 255, 0.45);
-  color: white;
+  color: var(--prm-text);
   box-shadow: 0 12px 24px rgba(63, 104, 255, 0.16);
 }
 
 .prm-tab-surface {
-  min-height: 280px;
+  min-height: clamp(300px, 44vh, 560px);
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.07);
   background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
   padding: 18px;
+  display: grid;
+  align-content: start;
+  width: 100%;
+}
+
+.prm-tab-surface > * {
+  min-width: 0;
+  width: 100%;
 }
 
 .prm-overview-grid,
@@ -530,7 +582,46 @@
 
 .prm-overview-grid,
 .prm-analytics-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: start;
+}
+
+.prm-tab-surface.panel-overview .prm-overview-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 16px;
+}
+
+.prm-overview-grid .prm-chart-shell {
+  grid-column: 1;
+}
+
+.prm-overview-side {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-content: start;
+}
+
+.prm-overview-side .prm-achievement-column {
+  gap: 12px;
+}
+
+.prm-tab-surface.panel-analytics .prm-analytics-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.prm-tab-surface.panel-materials .prm-materials-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.prm-tab-surface.panel-materials .prm-material-card {
+  min-height: 112px;
+}
+
+.prm-overview-grid .prm-achievement-column,
+.prm-analytics-grid .prm-bar-stack {
+  min-width: 0;
 }
 
 .prm-chart-shell {
@@ -564,6 +655,25 @@
   gap: 12px;
 }
 
+.prm-bar-stack {
+  align-content: start;
+}
+
+.prm-bar-stack-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+.prm-bar-stack-phase .prm-bar-stack-grid,
+.prm-bar-stack-status .prm-bar-stack-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.prm-bar-stack-velocity .prm-bar-stack-grid {
+  grid-template-columns: 1fr;
+}
+
 .prm-note-card,
 .prm-bar-card {
   padding: 14px 16px;
@@ -572,10 +682,40 @@
   border: 1px solid rgba(255,255,255,0.08);
 }
 
+.prm-bar-card {
+  min-height: 96px;
+}
+
+.prm-bar-card .prm-between {
+  align-items: flex-start;
+  gap: 10px;
+}
+
 .prm-note-card strong,
 .prm-bar-card strong {
   display: block;
   margin-bottom: 6px;
+}
+
+.prm-bar-card strong {
+  margin: 0;
+  line-height: 1.25;
+  font-size: 0.96rem;
+}
+
+.prm-bar-card .prm-between > span {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--prm-text);
+  white-space: nowrap;
+}
+
+.prm-bar-card small,
+.prm-bar-card p {
+  margin: 0;
+  line-height: 1.45;
 }
 
 .prm-note-card.compact strong {
@@ -587,7 +727,7 @@
 }
 
 .prm-subhead {
-  color: #dce7ff;
+  color: var(--prm-text);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -1210,6 +1350,10 @@
   border-color: var(--prm-line);
 }
 
+.premium-roadmap-shell .prm-btn-secondary {
+  color: var(--prm-text);
+}
+
 .premium-roadmap-shell .prm-hero-stat span,
 .premium-roadmap-shell .prm-modal-section-label,
 .premium-roadmap-shell .prm-modal-list-item span,
@@ -1330,6 +1474,12 @@
   border-bottom-color: color-mix(in srgb, var(--color-border) 70%, transparent);
 }
 
+:root[data-theme='light'] .premium-roadmap-shell .prm-btn-secondary {
+  background: color-mix(in srgb, var(--color-surface) 96%, transparent);
+  border-color: color-mix(in srgb, var(--color-border) 78%, transparent);
+  color: var(--color-text);
+}
+
 @media (max-width: 1320px) {
   .prm-kpi-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1339,8 +1489,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .prm-overview-grid,
-  .prm-analytics-grid {
+  .prm-tab-surface.panel-overview .prm-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prm-overview-side {
     grid-template-columns: 1fr;
   }
 }
@@ -1348,6 +1501,10 @@
 @media (max-width: 1180px) {
   .prm-hero,
   .prm-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .prm-cockpit-head {
     grid-template-columns: 1fr;
   }
 
@@ -1369,6 +1526,19 @@
   .prm-day-grid,
   .prm-meta-grid {
     grid-template-columns: 1fr;
+  }
+
+  .prm-bar-stack-phase .prm-bar-stack-grid,
+  .prm-bar-stack-status .prm-bar-stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prm-cockpit-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .prm-overview-grid .prm-chart-shell {
+    grid-column: span 1;
   }
 
   .prm-toolbar,
@@ -1407,3 +1577,281 @@
     height: 10px;
   }
 }
+
+  /* ---- Full layout redesign (v2 skin) ---- */
+  .premium-roadmap-shell.roadmap-redesign {
+    border-radius: 26px;
+    border-color: color-mix(in srgb, var(--prm-line-2) 76%, transparent);
+    box-shadow: 0 28px 72px rgba(3, 10, 24, 0.34);
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .premium-roadmap-app {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-hero {
+    border-radius: 22px;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.8fr);
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-hero h1 {
+    font-size: clamp(1.8rem, 3.2vw, 2.9rem);
+    margin: 10px 0 6px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-hero p {
+    max-width: 72ch;
+    line-height: 1.55;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-hero-stat {
+    min-width: 0;
+    width: 100%;
+    border-radius: 14px;
+    padding: 12px 13px;
+    background: color-mix(in srgb, var(--prm-panel-strong) 88%, transparent);
+    border: 1px solid var(--prm-line);
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-hero-stat strong {
+    margin-top: 5px;
+    font-size: 1rem;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-hero-stat span {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-kpi-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-kpi-card {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-kpi-value {
+    margin-top: 2px;
+    font-size: 1.65rem;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-layout {
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+    gap: 14px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-panel {
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-cockpit-head {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr);
+    gap: 10px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-cockpit-stats {
+    gap: 8px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-cockpit-stat {
+    border-radius: 12px;
+    padding: 9px 10px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-progress-card {
+    border-radius: 14px;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-tab-row {
+    margin-bottom: 10px;
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid var(--prm-line);
+    background: color-mix(in srgb, var(--prm-panel-strong) 88%, transparent);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-tab-btn {
+    border-radius: 10px;
+    padding: 9px 10px;
+    text-align: center;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-tab-surface {
+    min-height: clamp(340px, 52vh, 700px);
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-tab-surface.panel-overview .prm-overview-grid {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-tab-surface.panel-analytics .prm-analytics-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-tab-surface.panel-materials .prm-materials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-chart-shell {
+    min-height: 250px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-chart-shell svg {
+    height: 250px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-note-card,
+  .premium-roadmap-shell.roadmap-redesign .prm-bar-card {
+    border-radius: 14px;
+    padding: 11px 12px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-day-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-day-card {
+    border-radius: 14px;
+    padding: 12px;
+    gap: 9px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-day-focus {
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-right-rail {
+    gap: 10px;
+    top: 0.6rem;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-right-rail-compact .prm-panel {
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-meta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-meta-chip {
+    border-radius: 12px;
+    padding: 9px 10px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-action-row {
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-form-grid {
+    gap: 8px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-input,
+  .premium-roadmap-shell.roadmap-redesign .prm-textarea,
+  .premium-roadmap-shell.roadmap-redesign .prm-select {
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-timeline {
+    max-height: 280px;
+    padding-right: 4px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-timeline-item {
+    border-radius: 14px;
+    padding: 11px 12px 11px 13px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-modal {
+    width: min(1180px, 100%);
+    max-height: min(90vh, 900px);
+    border-radius: 18px;
+    padding: 14px;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-modal-head {
+    padding: 10px 0;
+  }
+
+  .premium-roadmap-shell.roadmap-redesign .prm-modal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  @media (max-width: 1300px) {
+    .premium-roadmap-shell.roadmap-redesign .prm-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .premium-roadmap-shell.roadmap-redesign .prm-right-rail {
+      position: static;
+    }
+
+    .premium-roadmap-shell.roadmap-redesign .prm-tab-surface.panel-analytics .prm-analytics-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .premium-roadmap-shell.roadmap-redesign .prm-hero {
+      grid-template-columns: 1fr;
+    }
+
+    .premium-roadmap-shell.roadmap-redesign .prm-kpi-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .premium-roadmap-shell.roadmap-redesign .prm-tab-surface.panel-overview .prm-overview-grid,
+    .premium-roadmap-shell.roadmap-redesign .prm-tab-surface.panel-analytics .prm-analytics-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .premium-roadmap-shell.roadmap-redesign .prm-day-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .premium-roadmap-shell.roadmap-redesign .premium-roadmap-app {
+      padding: 12px;
+    }
+
+    .premium-roadmap-shell.roadmap-redesign .prm-kpi-grid,
+    .premium-roadmap-shell.roadmap-redesign .prm-day-grid,
+    .premium-roadmap-shell.roadmap-redesign .prm-meta-grid,
+    .premium-roadmap-shell.roadmap-redesign .prm-tab-surface.panel-materials .prm-materials-grid,
+    .premium-roadmap-shell.roadmap-redesign .prm-modal-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .premium-roadmap-shell.roadmap-redesign .prm-tab-row {
+      grid-template-columns: 1fr;
+    }
+  }
