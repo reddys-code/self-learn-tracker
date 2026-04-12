@@ -1,6 +1,8 @@
-import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { buildThemeTokens, DEFAULT_CUSTOM_THEME, PRESET_THEMES, THEME_STORAGE_KEY } from '../theme/themeConfig';
 import { ensureAccessibleTextColor, normalizeHexColor } from '../theme/themeUtils';
+import { useAuth } from './AuthContext';
+import { apiClient } from '../api/client';
 
 const ThemeContext = createContext(null);
 
@@ -12,13 +14,13 @@ function getSystemTheme() {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-function readStoredTheme() {
+function readStoredTheme(storageKey) {
   if (typeof window === 'undefined') {
     return null;
   }
 
   try {
-    const raw = window.localStorage.getItem(THEME_STORAGE_KEY);
+    const raw = window.localStorage.getItem(storageKey);
     if (!raw) return null;
 
     const parsed = JSON.parse(raw);
@@ -46,10 +48,49 @@ function applyTokens(tokens, resolvedTheme) {
 }
 
 export function ThemeProvider({ children }) {
-  const stored = readStoredTheme();
-  const [themeName, setThemeName] = useState(stored?.themeName || 'system');
-  const [customTheme, setCustomTheme] = useState(stored?.customTheme || DEFAULT_CUSTOM_THEME);
+  const { user } = useAuth();
+  const [themeName, setThemeName] = useState('system');
+  const [customTheme, setCustomTheme] = useState(DEFAULT_CUSTOM_THEME);
   const [systemTheme, setSystemTheme] = useState(getSystemTheme);
+  const lastSyncedPayload = useRef('');
+
+  const storageKey = useMemo(() => {
+    const identity = user?.id || user?._id || user?.email || user?.username;
+    if (!identity) return THEME_STORAGE_KEY;
+    return `${THEME_STORAGE_KEY}:${String(identity).toLowerCase()}`;
+  }, [user]);
+
+  useEffect(() => {
+    lastSyncedPayload.current = '';
+  }, [user?.id]);
+
+  useEffect(() => {
+    const serverTheme = user?.themePreference
+      ? {
+        themeName: ['light', 'dark', 'custom', 'system'].includes(user.themePreference.themeName)
+          ? user.themePreference.themeName
+          : 'system',
+        customTheme: {
+          primary: normalizeHexColor(user.themePreference?.customTheme?.primary, DEFAULT_CUSTOM_THEME.primary),
+          background: normalizeHexColor(user.themePreference?.customTheme?.background, DEFAULT_CUSTOM_THEME.background),
+          text: normalizeHexColor(user.themePreference?.customTheme?.text, DEFAULT_CUSTOM_THEME.text),
+        },
+      }
+      : null;
+
+    const stored = serverTheme
+      || readStoredTheme(storageKey)
+      || (storageKey !== THEME_STORAGE_KEY ? readStoredTheme(THEME_STORAGE_KEY) : null);
+
+    if (stored) {
+      setThemeName(stored.themeName);
+      setCustomTheme(stored.customTheme);
+      return;
+    }
+
+    setThemeName('system');
+    setCustomTheme(DEFAULT_CUSTOM_THEME);
+  }, [storageKey]);
 
   useEffect(() => {
     if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
@@ -84,11 +125,45 @@ export function ThemeProvider({ children }) {
       text: ensureAccessibleTextColor(customTheme.background, customTheme.text),
     };
 
-    window.localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify({
+    window.localStorage.setItem(storageKey, JSON.stringify({
       themeName,
       customTheme: safeCustomTheme,
     }));
-  }, [customTheme, themeName]);
+  }, [customTheme, storageKey, themeName]);
+
+  useEffect(() => {
+    if (!user?.id) {
+      return undefined;
+    }
+
+    const payload = {
+      themePreference: {
+        themeName,
+        customTheme: {
+          primary: normalizeHexColor(customTheme.primary, DEFAULT_CUSTOM_THEME.primary),
+          background: normalizeHexColor(customTheme.background, DEFAULT_CUSTOM_THEME.background),
+          text: ensureAccessibleTextColor(customTheme.background, customTheme.text),
+        },
+      },
+    };
+
+    const payloadHash = JSON.stringify(payload);
+    if (payloadHash === lastSyncedPayload.current) {
+      return undefined;
+    }
+
+    const timer = window.setTimeout(() => {
+      void apiClient.patch('/auth/me/theme', payload)
+        .then(() => {
+          lastSyncedPayload.current = payloadHash;
+        })
+        .catch(() => {
+          // Keep local storage as fallback when backend sync fails.
+        });
+    }, 250);
+
+    return () => window.clearTimeout(timer);
+  }, [customTheme, themeName, user?.id]);
 
   const updateCustomTheme = (nextColors) => {
     setCustomTheme((current) => {

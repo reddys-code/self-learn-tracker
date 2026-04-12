@@ -1,4 +1,4 @@
-import { bootstrapAdmin, hasAnyUsers, verifyCredentials } from '../services/authService.js';
+import { bootstrapAdmin, hasAnyUsers, updateUserThemePreference, verifyCredentials } from '../services/authService.js';
 import { signAccessToken } from '../utils/auth.js';
 
 export async function fetchSetupStatus(_req, res, next) {
@@ -42,4 +42,13 @@ export async function login(req, res, next) {
 
 export async function me(req, res) {
   res.json({ user: req.user });
+}
+
+export async function updateMyThemePreference(req, res, next) {
+  try {
+    const updatedUser = await updateUserThemePreference(req.user.id, req.body?.themePreference || {});
+    res.json({ user: updatedUser });
+  } catch (error) {
+    next(error);
+  }
 }

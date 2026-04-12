@@ -26,6 +26,40 @@ function normalizeCourseIds(input = []) {
   return Array.from(new Set(input.map((item) => String(item || '').trim()).filter(Boolean)));
 }
 
+const DEFAULT_THEME_PREFERENCE = {
+  themeName: 'system',
+  customTheme: {
+    primary: '#0f766e',
+    background: '#111827',
+    text: '#f8fafc',
+  },
+};
+
+const HEX_COLOR_RE = /^#([0-9a-f]{6}|[0-9a-f]{3})$/i;
+
+function normalizeHexColor(value, fallback) {
+  const raw = String(value || '').trim();
+  if (!HEX_COLOR_RE.test(raw)) return fallback;
+  const normalized = raw.toLowerCase();
+  if (normalized.length === 7) return normalized;
+  const [r, g, b] = normalized.slice(1);
+  return `#${r}${r}${g}${g}${b}${b}`;
+}
+
+function normalizeThemePreference(themePreference = {}) {
+  const themeName = ['light', 'dark', 'custom', 'system'].includes(themePreference?.themeName)
+    ? themePreference.themeName
+    : DEFAULT_THEME_PREFERENCE.themeName;
+
+  const customTheme = {
+    primary: normalizeHexColor(themePreference?.customTheme?.primary, DEFAULT_THEME_PREFERENCE.customTheme.primary),
+    background: normalizeHexColor(themePreference?.customTheme?.background, DEFAULT_THEME_PREFERENCE.customTheme.background),
+    text: normalizeHexColor(themePreference?.customTheme?.text, DEFAULT_THEME_PREFERENCE.customTheme.text),
+  };
+
+  return { themeName, customTheme };
+}
+
 function toMongoCourseIds(ids = []) {
   return normalizeCourseIds(ids).filter((id) => mongoose.Types.ObjectId.isValid(id));
 }
@@ -52,6 +86,7 @@ export function sanitizeUser(user) {
     lastLoginAt: plain.lastLoginAt || null,
     createdAt: plain.createdAt || null,
     updatedAt: plain.updatedAt || null,
+    themePreference: normalizeThemePreference(plain.themePreference),
     assignedCourseIds: (plain.assignedCourseIds || []).map((item) => normalizeId(item._id || item)),
   };
 }
@@ -141,6 +176,7 @@ export async function createUser({ name, email, password, role = 'user', isActiv
       passwordHash,
       role: cleanRole,
       isActive,
+      themePreference: DEFAULT_THEME_PREFERENCE,
       assignedCourseIds: toMongoCourseIds(cleanAssignedCourseIds),
       createdBy: createdBy && mongoose.Types.ObjectId.isValid(createdBy) ? createdBy : null,
     });
@@ -157,6 +193,7 @@ export async function createUser({ name, email, password, role = 'user', isActiv
     role: cleanRole,
     isActive: Boolean(isActive),
     lastLoginAt: null,
+    themePreference: DEFAULT_THEME_PREFERENCE,
     assignedCourseIds: cleanAssignedCourseIds,
     createdAt: now,
     updatedAt: now,
@@ -276,6 +313,40 @@ export async function updateUser(userId, updates = {}) {
   if (password) {
     nextUser.passwordHash = await bcrypt.hash(password, 10);
   }
+  users[idx] = nextUser;
+  await writeUsersRaw(sortUsers(users));
+  return sanitizeUser(nextUser);
+}
+
+export async function updateUserThemePreference(userId, themePreference) {
+  const normalizedThemePreference = normalizeThemePreference(themePreference);
+
+  if (isDatabaseConnected()) {
+    const updated = await User.findByIdAndUpdate(
+      userId,
+      { themePreference: normalizedThemePreference },
+      { new: true }
+    ).lean();
+
+    if (!updated) {
+      throw createServiceError('User not found.', 404);
+    }
+
+    return sanitizeUser(updated);
+  }
+
+  const users = await readUsersFile();
+  const idx = users.findIndex((user) => normalizeId(user.id) === normalizeId(userId));
+  if (idx < 0) {
+    throw createServiceError('User not found.', 404);
+  }
+
+  const nextUser = {
+    ...users[idx],
+    themePreference: normalizedThemePreference,
+    updatedAt: new Date().toISOString(),
+  };
+
   users[idx] = nextUser;
   await writeUsersRaw(sortUsers(users));
   return sanitizeUser(nextUser);

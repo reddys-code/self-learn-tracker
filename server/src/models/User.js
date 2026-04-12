@@ -8,6 +8,14 @@ const UserSchema = new mongoose.Schema(
     role: { type: String, enum: ['admin', 'user'], default: 'user', index: true },
     isActive: { type: Boolean, default: true, index: true },
     lastLoginAt: { type: Date, default: null },
+    themePreference: {
+      themeName: { type: String, enum: ['light', 'dark', 'custom', 'system'], default: 'system' },
+      customTheme: {
+        primary: { type: String, default: '#0f766e' },
+        background: { type: String, default: '#111827' },
+        text: { type: String, default: '#f8fafc' },
+      },
+    },
     assignedCourseIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course', default: [] }],
     createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },
   },

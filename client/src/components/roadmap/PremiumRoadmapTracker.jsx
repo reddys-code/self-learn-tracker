@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowUpRight,
   BookOpenText,
@@ -193,7 +193,7 @@ function flattenCourseDays(course, progressMap = {}) {
         weekNumber: week.weekNumber,
         weekTitle: week.title,
         weekDeliverables: week.deliverables || [],
-        weekAccent: week.accent || '#6f8fff',
+        weekAccent: week.accent || 'var(--prm-blue)',
         focus: buildFallbackObjective(day),
         status,
         progressPercent,
@@ -246,21 +246,21 @@ function OverviewTab({ weeklyProgress = [], blockedCount, activeCount, completed
         <svg viewBox={`0 0 ${trend.width} ${trend.height}`} preserveAspectRatio="none" aria-hidden="true">
           <defs>
             <linearGradient id="prmAreaGrad" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="rgba(111, 143, 255, 0.48)" />
-              <stop offset="100%" stopColor="rgba(111, 143, 255, 0)" />
+              <stop offset="0%" stopColor="color-mix(in srgb, var(--prm-blue) 48%, transparent)" />
+              <stop offset="100%" stopColor="transparent" />
             </linearGradient>
             <linearGradient id="prmLineGrad" x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0%" stopColor="#6f8fff" />
-              <stop offset="100%" stopColor="#64e8ff" />
+              <stop offset="0%" stopColor="var(--prm-blue)" />
+              <stop offset="100%" stopColor="var(--prm-cyan)" />
             </linearGradient>
           </defs>
           <path d={trend.areaPath} fill="url(#prmAreaGrad)" />
           <path d={trend.linePath} fill="none" stroke="url(#prmLineGrad)" strokeWidth="4" strokeLinecap="round" />
           {trend.points.map((point, index) => (
             <g key={`${point.x}-${point.y}`}>
-              <circle cx={point.x} cy={point.y} r="4" fill="#dce7ff" />
+              <circle cx={point.x} cy={point.y} r="4" fill="var(--prm-text)" />
               {index % labelStep === 0 || index === trend.points.length - 1 ? (
-                <text x={point.x - 14} y={trend.height - 8} fill="#dce7ff" fontSize="12">
+                <text x={point.x - 14} y={trend.height - 8} fill="var(--prm-text)" fontSize="12">
                   W{weeklyProgress[index]?.weekNumber || index + 1}
                 </text>
               ) : null}
@@ -422,8 +422,8 @@ function KpiCard({ label, value, suffix = '', foot, values }) {
         <svg viewBox="0 0 100 44" preserveAspectRatio="none" aria-hidden="true">
           <defs>
             <linearGradient id={`spark-${label.replace(/\s+/g, '-').toLowerCase()}`} x1="0" x2="1" y1="0" y2="0">
-              <stop offset="0%" stopColor="#6f8fff" />
-              <stop offset="100%" stopColor="#64e8ff" />
+              <stop offset="0%" stopColor="var(--prm-blue)" />
+              <stop offset="100%" stopColor="var(--prm-cyan)" />
             </linearGradient>
           </defs>
           <polyline
@@ -460,6 +460,9 @@ export function PremiumRoadmapTracker({
     evidenceUrl: '',
   });
   const [toast, setToast] = useState('');
+  const modalRef = useRef(null);
+  const closeButtonRef = useRef(null);
+  const lastFocusedElementRef = useRef(null);
 
   const days = useMemo(() => flattenCourseDays(course, progressMap), [course, progressMap]);
 
@@ -509,14 +512,68 @@ export function PremiumRoadmapTracker({
 
   useEffect(() => {
     if (!popupDay) return undefined;
-    const onKeyDown = (event) => {
-      if (event.key === 'Escape') {
-        setPopupDayId(null);
+
+    lastFocusedElementRef.current = document.activeElement;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const focusTimer = window.setTimeout(() => {
+      if (closeButtonRef.current) {
+        closeButtonRef.current.focus();
+      } else if (modalRef.current) {
+        modalRef.current.focus();
+      }
+    }, 0);
+
+    return () => {
+      window.clearTimeout(focusTimer);
+      document.body.style.overflow = previousOverflow;
+      if (lastFocusedElementRef.current && typeof lastFocusedElementRef.current.focus === 'function') {
+        lastFocusedElementRef.current.focus();
       }
     };
-    window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
   }, [popupDay]);
+
+  const handleModalKeyDown = (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      setPopupDayId(null);
+      return;
+    }
+
+    if (event.key !== 'Tab' || !modalRef.current) {
+      return;
+    }
+
+    const focusableSelectors = [
+      'a[href]',
+      'button:not([disabled])',
+      'textarea:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      '[tabindex]:not([tabindex="-1"])',
+    ];
+
+    const focusables = Array.from(modalRef.current.querySelectorAll(focusableSelectors.join(',')))
+      .filter((element) => !element.hasAttribute('disabled') && element.getAttribute('aria-hidden') !== 'true');
+
+    if (!focusables.length) {
+      event.preventDefault();
+      return;
+    }
+
+    const firstFocusable = focusables[0];
+    const lastFocusable = focusables[focusables.length - 1];
+    const activeElement = document.activeElement;
+
+    if (event.shiftKey && activeElement === firstFocusable) {
+      event.preventDefault();
+      lastFocusable.focus();
+    } else if (!event.shiftKey && activeElement === lastFocusable) {
+      event.preventDefault();
+      firstFocusable.focus();
+    }
+  };
 
   const averageHours = useMemo(() => {
     if (!days.length) return 0;
@@ -905,7 +962,7 @@ export function PremiumRoadmapTracker({
                     <div className="prm-day-focus">{day.focus}</div>
 
                     <div className="prm-mini-progress">
-                      <span style={{ width: `${day.progressPercent}%`, background: `linear-gradient(90deg, ${statusRingColor[day.status]}, #64e8ff)` }} />
+                      <span style={{ width: `${day.progressPercent}%`, background: `linear-gradient(90deg, ${statusRingColor[day.status]}, var(--prm-cyan))` }} />
                     </div>
 
                     <div className="prm-between prm-day-footer">
@@ -928,18 +985,21 @@ export function PremiumRoadmapTracker({
         <div className="prm-modal-backdrop" onClick={() => setPopupDayId(null)} role="presentation">
           <div
             className="prm-modal"
+            ref={modalRef}
             role="dialog"
             aria-modal="true"
-            aria-label={`Day ${popupDay.dayNumber} details`}
+            aria-labelledby="prm-modal-title"
+            tabIndex={-1}
+            onKeyDown={handleModalKeyDown}
             onClick={(event) => event.stopPropagation()}
           >
             <div className="prm-modal-head">
               <div>
                 <div className="prm-small-label">Day deep-dive</div>
-                <h3>{`Day ${popupDay.dayNumber} - ${popupDay.title}`}</h3>
+                <h3 id="prm-modal-title">{`Day ${popupDay.dayNumber} - ${popupDay.title}`}</h3>
                 <p>{popupDay.focus}</p>
               </div>
-              <button type="button" className="prm-modal-close" onClick={() => setPopupDayId(null)} aria-label="Close details popup">
+              <button type="button" ref={closeButtonRef} className="prm-modal-close" onClick={() => setPopupDayId(null)} aria-label="Close details popup">
                 <X size={18} />
               </button>
             </div>
