@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import {
   createAdminCourse,
+  fetchAdminCourseTemplate,
   fetchAdminCourses,
   fetchAdminOverviewController,
   fetchAdminUserProgress,
@@ -35,6 +36,7 @@ router.put('/portal/courses/:courseRef/progress/:dayNumber', protect, saveMyProg
 router.get('/portal/courses/:courseRef/summary', protect, fetchMySummary);
 
 router.get('/admin/overview', protect, adminOnly, fetchAdminOverviewController);
+router.get('/admin/courses/template', protect, adminOnly, fetchAdminCourseTemplate);
 router.get('/admin/courses', protect, adminOnly, fetchAdminCourses);
 router.post('/admin/courses', protect, adminOnly, createAdminCourse);
 router.patch('/admin/courses/:courseRef', protect, adminOnly, updateAdminCourse);

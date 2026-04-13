@@ -30,16 +30,36 @@ const statusLabel = {
 
 function MaterialLinks({ materials = [] }) {
   if (!materials.length) return null;
+  const materialLinks = materials.filter((item) => item.type !== 'video');
+  const videoLinks = materials.filter((item) => item.type === 'video');
+
   return (
     <div className="day-materials">
-      <label>Materials</label>
-      <div className="material-chip-row">
-        {materials.map((material) => (
-          <a className="mini-badge material-badge" key={material.id || `${material.title}-${material.url}`} href={withApiOrigin(material.url)} target="_blank" rel="noreferrer">
-            <Download size={14} /> {material.title}
-          </a>
-        ))}
-      </div>
+      {materialLinks.length ? (
+        <>
+          <label>Materials</label>
+          <div className="material-chip-row">
+            {materialLinks.map((material) => (
+              <a className="mini-badge material-badge" key={material.id || `${material.title}-${material.url}`} href={withApiOrigin(material.url)} target="_blank" rel="noreferrer">
+                <Download size={14} /> {material.title}
+              </a>
+            ))}
+          </div>
+        </>
+      ) : null}
+
+      {videoLinks.length ? (
+        <>
+          <label>Videos</label>
+          <div className="material-chip-row">
+            {videoLinks.map((video) => (
+              <a className="mini-badge material-badge" key={video.id || `${video.title}-${video.url}`} href={withApiOrigin(video.url)} target="_blank" rel="noreferrer">
+                <LinkIcon size={14} /> {video.title}
+              </a>
+            ))}
+          </div>
+        </>
+      ) : null}
     </div>
   );
 }

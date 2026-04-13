@@ -1,5 +1,5 @@
 import { Palette, SunMoon } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { THEME_OPTIONS } from '../../theme/themeConfig';
 
@@ -17,10 +17,34 @@ function ThemeColorInput({ label, value, onChange, id }) {
 
 export function ThemeSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
+  const pickerRef = useRef(null);
   const { customTheme, resolvedTheme, setThemeName, themeName, updateCustomTheme } = useTheme();
 
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handlePointerDown = (event) => {
+      if (!pickerRef.current?.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
   return (
-    <section className="theme-picker" aria-label="Theme picker">
+    <section className="theme-picker" aria-label="Theme picker" ref={pickerRef}>
       <button
         type="button"
         className="theme-picker-toggle"
@@ -28,7 +52,7 @@ export function ThemeSwitcher() {
         aria-expanded={isOpen}
         aria-controls="theme-picker-panel"
       >
-        <Palette size={18} /> Theme
+        <Palette size={18} /> Theme Studio
       </button>
 
       <div id="theme-picker-panel" className={`theme-picker-panel ${isOpen ? 'open' : ''}`}>

@@ -35,15 +35,36 @@ function sanitizeStringList(input = []) {
 }
 
 function sanitizeAttachments(input = []) {
+  const normalizeAttachmentUrl = (url) => {
+    const clean = sanitizeText(url);
+    if (!clean) return '';
+    if (/^(https?:)?\/\//i.test(clean) || clean.startsWith('/')) return clean;
+    return `https://${clean}`;
+  };
+
+  const titleFromType = (type) => {
+    const normalizedType = sanitizeText(type || 'link').toLowerCase();
+    if (normalizedType === 'video') return 'Video link';
+    if (normalizedType === 'pdf') return 'PDF resource';
+    if (normalizedType === 'repo') return 'Repository';
+    if (normalizedType === 'slides') return 'Slides';
+    if (normalizedType === 'worksheet') return 'Worksheet';
+    return 'Material link';
+  };
+
   return (Array.isArray(input) ? input : [])
     .map((item) => ({
-      title: sanitizeText(item?.title || item?.label || item?.name),
-      url: sanitizeText(item?.url),
       type: sanitizeText(item?.type || 'link') || 'link',
+      title: sanitizeText(item?.title || item?.label || item?.name),
+      url: normalizeAttachmentUrl(item?.url),
       description: sanitizeText(item?.description),
     }))
-    .filter((item) => item.title && item.url)
-    .map((item, index) => ({ ...item, id: item.id || `${item.type || 'asset'}-${index + 1}-${randomUUID().slice(0, 8)}` }));
+    .filter((item) => item.url)
+    .map((item, index) => ({
+      ...item,
+      title: item.title || titleFromType(item.type),
+      id: item.id || `${item.type || 'asset'}-${index + 1}-${randomUUID().slice(0, 8)}`,
+    }));
 }
 
 function sanitizeSections(input = []) {
@@ -407,6 +428,60 @@ export async function createCourse(payload, actorId = null) {
   courses.push(next);
   await writeCoursesFile(courses);
   return normalizeCourseEntity(next);
+}
+
+export function getCourseEditorTemplate() {
+  return {
+    id: '',
+    slug: '',
+    title: 'Untitled Course',
+    category: 'General',
+    level: 'Intermediate',
+    status: 'draft',
+    shortDescription: '',
+    tagline: '',
+    brochure: {
+      eyebrow: 'NEW COURSE',
+      headline: '',
+      lead: '',
+      strapTitle: '',
+      strapText: '',
+      pdfUrl: '',
+      heroImageUrl: '',
+      chips: [],
+      audience: [],
+      outcomes: [],
+      differentiators: [],
+      cadence: [],
+      timeline: [],
+    },
+    stats: [],
+    downloads: [],
+    featuredScreens: [],
+    weeks: [
+      {
+        weekNumber: 1,
+        phaseLabel: 'Phase 1',
+        title: 'Week 1',
+        summary: '',
+        accent: '#2e6ca5',
+        deliverables: [],
+        days: [
+          {
+            dayNumber: 1,
+            dayType: 'Weekday',
+            hours: '5h',
+            title: 'Day 1',
+            objective: '',
+            sections: [{ label: 'Module', value: '' }],
+            primaryDeliverable: '',
+            materials: [],
+            tags: [],
+          },
+        ],
+      },
+    ],
+  };
 }
 
 export async function updateCourse(courseRef, payload, actorId = null) {

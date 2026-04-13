@@ -2,6 +2,7 @@ import {
   VALID_STATUSES,
   createCourse,
   getAdminOverview,
+  getCourseEditorTemplate,
   getCourseByRef,
   getCourseSummaryForUser,
   getLearnerOverview,
@@ -142,6 +143,15 @@ export async function fetchAdminCourses(req, res, next) {
   try {
     const courses = await listAllCourses();
     res.json(courses);
+  } catch (error) {
+    next(error);
+  }
+}
+
+export async function fetchAdminCourseTemplate(_req, res, next) {
+  try {
+    const template = getCourseEditorTemplate();
+    res.json(template);
   } catch (error) {
     next(error);
   }

@@ -13,6 +13,7 @@ import {
   Layers3,
   Link as LinkIcon,
   Loader2,
+  PlayCircle,
   RefreshCcw,
   Search,
   ShieldAlert,
@@ -371,13 +372,30 @@ function AnalyticsTab({ statusCounts, phaseProgress = [], weeklyProgress = [] })
 }
 
 function MaterialsTab({ selectedDay, course }) {
+  const allDayMaterials = (course?.weeks || []).flatMap((week) =>
+    (week.days || []).flatMap((day) =>
+      (day.materials || []).map((item, index) => ({
+        ...item,
+        _meta: `Week ${week.weekNumber} Day ${day.dayNumber}`,
+        _key: `${week.weekNumber}-${day.dayNumber}-${item.id || item.url || item.title || index}`,
+      }))
+    )
+  );
+
   const materialCards = [
     ...(selectedDay?.materials || []).map((item) => ({
       key: `day-material-${item.id || item.url || item.title}`,
       title: item.title,
-      meta: item.description || 'Selected day material',
+      meta: item.description || (item.type === 'video' ? 'Video link' : 'Selected day material'),
       href: safeExternalUrl(item.url),
-      icon: <BookOpenText size={16} />,
+      icon: item.type === 'video' ? <PlayCircle size={16} /> : <BookOpenText size={16} />,
+    })),
+    ...allDayMaterials.map((item) => ({
+      key: `course-day-material-${item._key}`,
+      title: item.title,
+      meta: item.description || item._meta,
+      href: safeExternalUrl(item.url),
+      icon: item.type === 'video' ? <PlayCircle size={16} /> : <BookOpenText size={16} />,
     })),
     ...(course?.downloads || []).map((item) => ({
       key: `course-download-${item.id || item.url || item.title}`,
@@ -400,7 +418,7 @@ function MaterialsTab({ selectedDay, course }) {
       href: '',
       icon: <Sparkles size={16} />,
     }))),
-  ];
+  ].filter((item, index, arr) => arr.findIndex((entry) => entry.title === item.title && entry.href === item.href) === index);
 
   if (!materialCards.length) {
     return (
